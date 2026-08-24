@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Use deployed backend URL in production, localhost in development
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:8000/api",
+  baseURL: process.env.REACT_APP_API_URL || "https://college-info-ai-backend.onrender.com/api",
 });
 
 // Automatically attach the token to every request if logged in
