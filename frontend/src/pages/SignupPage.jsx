@@ -19,7 +19,7 @@ export default function SignupPage() {
     setLoading(true);
 
     try {
-      const response = await signup(name, email, password);
+      await signup(name, email, password);
       setSuccess("Account created! Redirecting to login...");
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
