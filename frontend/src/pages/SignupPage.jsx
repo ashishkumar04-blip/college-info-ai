@@ -19,11 +19,14 @@ export default function SignupPage() {
     setLoading(true);
 
     try {
-      await signup(name, email, password);
+      const response = await signup(name, email, password);
       setSuccess("Account created! Redirecting to login...");
-      setTimeout(() => navigate("/login"), 1500); // Go to login after 1.5 sec
+      setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
-      setError(err.response?.data?.detail || "Something went wrong. Try again.");
+      const detail = err.response?.data?.detail;
+      const status = err.response?.status;
+      const url = err.config?.url;
+      setError(`Error ${status}: ${detail} (URL: ${url})`);
     } finally {
       setLoading(false);
     }
