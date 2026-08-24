@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// Base URL of your backend
+// Use deployed backend URL in production, localhost in development
 const API = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: process.env.REACT_APP_API_URL || "http://localhost:8000/api",
 });
 
 // Automatically attach the token to every request if logged in
