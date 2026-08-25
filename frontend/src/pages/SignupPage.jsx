@@ -23,10 +23,7 @@ export default function SignupPage() {
       setSuccess("Account created! Redirecting to login...");
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
-      const detail = err.response?.data?.detail;
-      const status = err.response?.status;
-      const fullUrl = (err.config?.baseURL || "") + (err.config?.url || "");
-      setError(`Error ${status}: ${detail} | Full URL: ${fullUrl}`);
+      setError(err.response?.data?.detail || "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
