@@ -53,16 +53,23 @@ def create_token(email: str) -> str:
 
 @router.post("/signup")
 def signup(request: SignupRequest, db: Session = Depends(get_db)):
+    clean_email = request.email.strip().lower()
+    clean_name = request.name.strip()
+    clean_password = request.password.strip()
+
+    if not clean_email or not clean_password or not clean_name:
+        raise HTTPException(status_code=400, detail="All fields are required")
+
     # Check if email already exists
-    existing = db.query(models.User).filter(models.User.email == request.email).first()
+    existing = db.query(models.User).filter(models.User.email == clean_email).first()
     if existing:
         raise HTTPException(status_code=400, detail="Email already registered")
 
     # Create new user with hashed password
     new_user = models.User(
-        name=request.name,
-        email=request.email,
-        hashed_password=hash_password(request.password)
+        name=clean_name,
+        email=clean_email,
+        hashed_password=hash_password(clean_password)
     )
     db.add(new_user)
     db.commit()
@@ -73,11 +80,14 @@ def signup(request: SignupRequest, db: Session = Depends(get_db)):
 
 @router.post("/login")
 def login(request: LoginRequest, db: Session = Depends(get_db)):
+    clean_email = request.email.strip().lower()
+    clean_password = request.password.strip()
+
     # Find user by email
-    user = db.query(models.User).filter(models.User.email == request.email).first()
+    user = db.query(models.User).filter(models.User.email == clean_email).first()
 
     # Check if user exists and password is correct
-    if not user or not verify_password(request.password, user.hashed_password):
+    if not user or not verify_password(clean_password, user.hashed_password):
         raise HTTPException(status_code=401, detail="Invalid email or password")
 
     # Generate and return JWT token

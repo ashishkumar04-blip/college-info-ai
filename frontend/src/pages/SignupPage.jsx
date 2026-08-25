@@ -18,7 +18,7 @@ export default function SignupPage() {
     setLoading(true);
 
     try {
-      await signup(name, email, password);
+      await signup(name.trim(), email.trim().toLowerCase(), password.trim());
       setSuccess("Account created! Redirecting to login...");
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {

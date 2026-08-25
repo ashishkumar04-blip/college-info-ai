@@ -16,7 +16,7 @@ export default function LoginPage() {
     setError("");
     setLoading(true);
     try {
-      const response = await login(email, password);
+      const response = await login(email.trim().toLowerCase(), password.trim());
       loginUser(response.data.access_token, response.data.user_name);
       navigate("/chat");
     } catch (err) {
