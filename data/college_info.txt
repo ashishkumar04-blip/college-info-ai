@@ -1,340 +1,415 @@
-LOVELY PROFESSIONAL UNIVERSITY (LPU) - COMPLETE INFORMATION GUIDE
-===================================================================
-Location: Phagwara, Punjab - 144411, India
-Website: www.lpu.in | Admission Portal: admission.lpu.in
-Phone: 1800-102-4431 (Toll Free) | +91-1824-517000
-Email: admissions@lpu.in
-Accreditation: NAAC A++ Accredited | Ranked among top universities in India
+LOVELY PROFESSIONAL UNIVERSITY (LPU) - OFFICIAL KNOWLEDGE BASE
+================================================================
+Location: Jalandhar - Delhi G.T. Road (NH-1), Phagwara, Punjab - 144411, India
+Official Website: https://www.lpu.in | Admissions: https://admission.lpu.in
+Student Portal (UMS): https://ums.lpu.in | Distance Education: https://lpude.in
+Helpline: 1800-102-4431 (Toll-Free) | +91-1824-517000 | admissions@lpu.in
 
-## ABOUT LPU
-Lovely Professional University (LPU) is one of the largest private universities in India, located in Phagwara, Punjab. Established in 2005 and recognized by the University Grants Commission (UGC), LPU has a massive 600-acre campus. It offers 200+ programs across Engineering, Management, Sciences, Law, Design, Agriculture, Pharmacy, and more. LPU has 40,000+ students from 50+ countries and 2000+ faculty members. It is known for excellent placement record, modern infrastructure, and strong industry connections.
+================================================================
+TABLE OF CONTENTS & KNOWLEDGE CATEGORIES
+================================================================
+1. 🏫 University Overview (History, Vision, Mission, Campus)
+2. 🎓 Programmes Offered (Diploma, UG, PG, Integrated, Ph.D.)
+3. 📚 Courses & Curriculum Structure (Credits, Scheme, Minors, Specializations)
+4. 📅 Academic Calendar & Important Dates (Semesters, Breaks, Registration)
+5. 📝 Examinations & Evaluation (MTT, ETE, CA, Reappear, Re-evaluation)
+6. 💰 Fees Structure & Payment Policies (Tuition, Other Charges, Penalties)
+7. 🎓 Scholarships & Financial Assistance (LPUNEST, Merit, Sports, Defence)
+8. 🏠 Hostel & Residential Life (Rooms, AC/Non-AC, Mess, Curfew, Gate Pass)
+9. 💼 Placements & Career Development (CDC, Recruiters, Packages, Internships)
+10. 🏅 Accreditations, Approvals & Global Rankings (NAAC A++, NIRF, THE, QS)
+11. 🏢 Schools, Faculties & Departments (Mittal School of Business, Engineering, etc.)
+12. 🏟️ Campus Infrastructure & Facilities (Library, UniMall, UniHospital, Sports)
+13. 👨‍🎓 Student Services & UMS Portal (UMS, Certificates, Leaves, E-Samadhan)
+14. 📜 Rules, Attendance (75% Rule) & Code of Conduct (Discipline, UFM)
+15. 📞 Contacts, Helplines & Department Directory
+16. 📰 Notices & Upcoming Announcements
+17. 🤖 AI FAQ & Quick Answers
 
-## ADMISSION PROCESS
-Step 1 - Registration: Visit www.lpu.in or admission.lpu.in and fill the online application form. Pay the registration fee online.
+---
 
-Step 2 - Entrance Test (LPUNEST): Appear for LPUNEST (LPU National Entrance and Scholarship Test). This test is both an entrance exam and a scholarship gateway. LPUNEST is held in multiple phases throughout the year from December to September. Results are declared within 3 working days of appearing. Students can also use national exam scores like JEE Main, CUET, CAT, CLAT, NEET depending on the program.
+## 🏫 UNIVERSITY OVERVIEW
+- About LPU: Lovely Professional University (LPU) is a premier private university established in 2005 under the Lovely Professional University Act by the State Legislature of Punjab. It is recognized under Section 2(f) of the UGC Act, 1956.
+- Campus Size: Sprawling 600+ acre green, Wi-Fi enabled, hi-tech campus situated on the National Highway 1 (GT Road) in Phagwara, Punjab (between Jalandhar and Ludhiana).
+- Student Demographics: Over 35,000+ to 40,000+ full-time students from all 28 states of India and 8 union territories, plus 3,000+ international students from over 50+ nations across the globe.
+- Vision: To be a premier academic institution recognized globally for its contribution to industry and society through excellence in teaching, learning, research, internationalization, entrepreneurship, and leadership.
+- Mission: 
+  * Transform education through academic rigor, practical learning, and industry integration.
+  * Foster research, intellectual innovation, and patent commercialization.
+  * Provide an inclusive and diverse multi-cultural learning ecosystem.
+  * Develop socially responsible global citizens and entrepreneurial leaders.
+- Key Leadership: Chancellor Dr. Ashok Kumar Mittal and Pro-Chancellor Mrs. Rashmi Mittal.
 
-Step 3 - Document Submission: Submit required documents including 10th and 12th marksheets, transfer certificate, character certificate, passport-size photographs, and Aadhar card. SC/ST/OBC students must submit caste certificate.
+---
 
-Step 4 - Counseling and Seat Allotment: After qualifying the entrance test, candidates participate in counseling for seat allocation.
+## 🎓 PROGRAMMES OFFERED
+LPU offers over 200+ undergraduate, postgraduate, integrated, diploma, and doctoral programmes across 40+ disciplines:
 
-Step 5 - Fee Payment: Pay the semester fee to confirm the seat.
+1. Engineering & Technology:
+   - B.Tech (4 Years): Computer Science and Engineering (CSE), CSE with AI and Machine Learning, Data Science, Cyber Security, Cloud Computing, Full Stack Development, Electronics & Communication (ECE), Mechanical Engineering (ME), Civil Engineering (CE), Electrical & Electronics (EEE), Biotechnology, Automobile, Aerospace, Chemical, Food Technology, Biomedical Engineering.
+   - M.Tech (2 Years): CSE, VLSI Design, Robotics, Structural Engineering, Thermal Engineering.
+   - Integrated B.Tech - M.Tech / B.Tech - MBA (5 Years).
+   - Diploma in Engineering (3 Years) & Lateral Entry to B.Tech (3 Years for diploma/B.Sc holders).
 
-Important Admission Dates 2026:
-- LPUNEST Phase 5 registration started: August 1, 2026
-- LPUNEST Phase 5 exams from: August 4, 2026
-- Last date for admission: August 20, 2026
-- Scholarship exam last date: August 22, 2026
+2. Management & Commerce (Mittal School of Business):
+   - BBA (3 Years), BBA (Hons), BBA with International Finance, BBA Business Analytics.
+   - MBA (2 Years): Marketing, Finance, Human Resource, Business Analytics, Supply Chain & Logistics, International Business, Hospital & Healthcare, Agribusiness.
+   - B.Com (3 Years), B.Com (Hons), M.Com (2 Years).
 
-Eligibility:
-- B.Tech: 10+2 with Physics, Chemistry, Mathematics with minimum 60% marks
-- B.Com/BBA/B.Sc: 10+2 in any stream with minimum 55% marks
-- MBA: Graduation in any stream with minimum 55% marks
+3. Computer Applications & IT:
+   - BCA (3 Years), BCA (Hons), B.Sc Information Technology.
+   - MCA (2 Years), M.Sc Information Technology.
 
-Early application allows students to avail scholarships and early bird discounts.
+4. Pharmaceutical Sciences & Paramedical:
+   - B.Pharm (4 Years - PCI Approved), M.Pharm (Pharmaceutics, Pharmacology, Pharmaceutical Chemistry).
+   - B.Sc / M.Sc Medical Laboratory Technology (MLT), Radiology, Clinical Research, Physiotherapy (BPT & MPT).
 
-## COURSES OFFERED
-LPU offers 200+ programs across various disciplines.
+5. Agriculture & Bio Sciences:
+   - B.Sc (Hons) Agriculture (4 Years - ICAR Accredited), M.Sc Agriculture (Agronomy, Genetics & Plant Breeding, Horticulture, Entomology, Soil Science).
+   - B.Sc / M.Sc Biotechnology, Microbiology, Food Science.
 
-Engineering and Technology (B.Tech - 4 years):
-- B.Tech Computer Science and Engineering
-- B.Tech Computer Science with specialization in AI and Machine Learning
-- B.Tech Computer Science with specialization in Data Science
-- B.Tech Computer Science with specialization in Cybersecurity
-- B.Tech Electronics and Communication Engineering
-- B.Tech Mechanical Engineering
-- B.Tech Civil Engineering
-- B.Tech Electrical Engineering
-- B.Tech Chemical Engineering
-- B.Tech Biotechnology
+6. Law:
+   - BA LLB (Hons) (5 Years Integrated), BBA LLB (Hons) (5 Years Integrated - BCI Approved).
+   - LLB (3 Years), LLM (1 Year / 2 Years).
 
-Management Programs:
-- BBA - Bachelor of Business Administration (3 years)
-- MBA - Master of Business Administration (2 years)
-- B.Com - Bachelor of Commerce (3 years)
-- B.Com (Hons) - 3 years
-- M.Com - Master of Commerce (2 years)
+7. Architecture, Design & Fashion:
+   - B.Arch (5 Years - COA Approved), B.Des Product Design, Interior Design, Fashion Design, Multimedia, Animation, Gaming (4 Years).
+   - M.Des, M.Arch.
 
-Science Programs:
-- B.Sc with various specializations (3 years)
-- M.Sc with various specializations (2 years)
-- B.Sc Agriculture (4 years)
-- B.Pharm - Bachelor of Pharmacy (4 years)
-- M.Pharm (2 years)
+8. Basic & Applied Sciences:
+   - B.Sc / M.Sc in Physics, Chemistry, Mathematics, Statistics, Botany, Zoology.
 
-Law and Design:
-- BA LLB - Integrated (5 years)
-- LLB (3 years)
-- B.Des - Bachelor of Design (4 years)
-- M.Des - Master of Design (2 years)
+9. Humanities, Social Sciences, Languages & Journalism:
+   - B.A. / M.A. in English, Psychology, Economics, History, Political Science, Sociology, Punjabi, Hindi.
+   - BA / MA in Journalism and Mass Communication.
 
-Other Programs:
-- B.A. English, Economics, Psychology, Journalism (3 years)
-- BCA - Bachelor of Computer Applications (3 years)
-- MCA - Master of Computer Applications (2 years)
-- Ph.D programs in all disciplines
+10. Education & Physical Education:
+    - B.Ed (2 Years - NCTE Approved), Integrated BA-B.Ed / B.Sc-B.Ed (4 Years).
+    - B.P.Ed (2 Years), M.P.Ed (2 Years), B.Sc Health & Physical Education.
 
-## FEES STRUCTURE
-Fee structure varies by program. Fees are approximate and subject to change. Verify at www.lpu.in.
+11. Hotel Management & Tourism:
+    - B.Sc Hotel Management, BHMCT (Bachelor of Hotel Management and Catering Technology - 4 Years).
 
-B.Tech Programs:
-- B.Tech Computer Science (regular): Rs. 1,60,000 to Rs. 2,10,000 per semester
-- B.Tech with specializations (AI, Data Science, Cybersecurity): Rs. 2,00,000 to Rs. 2,60,000 per semester
-- Total B.Tech fees over 4 years: Rs. 4.5 lakh to Rs. 16 lakh depending on specialization
+12. Doctoral Programmes (Ph.D.):
+    - Full-time and Part-time Ph.D. across Engineering, Management, Pharmacy, Law, Sciences, Arts, and Humanities.
 
-Management Programs:
-- BBA: Rs. 85,000 to Rs. 1,00,000 per semester
-- MBA: Rs. 1,10,000 to Rs. 1,60,000 per semester
-- B.Com: Rs. 55,000 to Rs. 75,000 per semester
+---
 
-Science Programs:
-- B.Sc: Rs. 50,000 to Rs. 75,000 per semester
-- B.Pharm: Rs. 90,000 to Rs. 1,10,000 per semester
+## 📚 COURSES & CURRICULUM STRUCTURE
+- Choice Based Credit System (CBCS): LPU implements UGC-recommended CBCS allowing students to customize their learning pathways with core courses, department electives, open electives, and skill enhancement courses.
+- Minor Specializations: Engineering and Management students can earn a Minor in another discipline (e.g., a Mechanical student taking a Minor in Computer Science / AI, or a B.Tech student taking a Minor in Finance).
+- Industry Certifications & MOOCs: Integration of Coursera, edX, AWS, Google Cloud, Cisco, and Microsoft certifications directly into the curriculum for course credits.
+- Grading System: 10-point scale grading system:
+  * Grade O (Outstanding): Grade Point 10
+  * Grade A+ (Excellent): Grade Point 9
+  * Grade A (Very Good): Grade Point 8
+  * Grade B+ (Good): Grade Point 7
+  * Grade B (Above Average): Grade Point 6
+  * Grade C (Average): Grade Point 5
+  * Grade P (Pass): Grade Point 4
+  * Grade F / E (Fail / Reappear): Grade Point 0
+  * Grade I (Incomplete / Ineligible due to attendance): Grade Point 0
+- CGPA Calculation: Cumulative Grade Point Average (CGPA) is computed based on weighted sum of credit points earned across all semesters divided by total credits registered.
+- Capstone Project / Industry Internship: Final year students must undertake a live industry capstone project or a full-semester / year-long industrial internship.
 
-## SCHOLARSHIPS
-LPU offers a wide range of scholarships to make education accessible.
+---
 
-LPUNEST-Based Scholarships:
-- Top ranks in LPUNEST: Up to 100% tuition fee waiver
-- Scholarships are awarded in categories (A, B, C) based on LPUNEST scores
-- Ph.D programs: 20% to 60% fee waiver based on score
+## 📅 ACADEMIC CALENDAR & SCHEDULES
+LPU follows a bi-semester system:
 
-Merit-Based Scholarships:
-- Score 90%+ in 12th standard: Merit scholarship available
-- Strong performance in national exams like JEE, CUET, CAT
+1. Autumn / Odd Semester (July/August to December):
+   - Course Registration & Fee Payment: June - July
+   - Commencement of Classes: Late July / First week of August
+   - Mid-Term Tests (MTT): Late September to early October
+   - End-Term Practical Exams: Mid-November
+   - End-Term Theory Examinations (ETE): Late November to Mid-December
+   - Winter Break: Mid-December to first week of January
 
-Special Category Scholarships:
-- Sports achievements: National/international level athletes
-- Cultural achievements: Outstanding performers
-- R&D contributions
-- Social service awards
-- Bravery awards
-- Scholarships for orphans and persons with disabilities
-- Scholarships for students from Defence and Armed Forces families
+2. Spring / Even Semester (January to May/June):
+   - Course Registration: Late December - Early January
+   - Commencement of Classes: Second week of January
+   - Mid-Term Tests (MTT): Late February to early March
+   - End-Term Practical Exams: Mid-April
+   - End-Term Theory Examinations (ETE): May to early June
+   - Summer Break / Summer Term: June to July (Summer term allows students to clear backlogs or accelerate credits).
 
-Need-Based Financial Aid:
-- Available for students from families with specific annual income limits
-- Apply with income certificate during admission
+3. Holidays & Observances:
+   - All gazetted national and state holidays (Independence Day, Republic Day, Gandhi Jayanti, Diwali, Holi, Gurpurab, Eid, Christmas).
+   - Academic calendars with exact dates are published on UMS (ums.lpu.in) under the "Academic Calendar" tab prior to each session.
 
-How to apply for scholarships:
-1. Complete registration on admission.lpu.in
-2. Fill the online scholarship form
-3. Upload supporting documents (marksheets, income certificate, sports/cultural certificates)
-4. University verifies documents and confirms eligibility
+---
 
-## HOSTEL INFORMATION
-LPU has separate hostels for boys and girls with world-class facilities.
+## 📝 EXAMINATIONS, ASSESSMENTS & RESULTS
+- Evaluation Pattern:
+  * Continuous Assessment (CA) [20% - 30% weightage]: Includes objective quizzes on UMS, home assignments, class participation, case studies, coding assignments, and term papers.
+  * Mid-Term Test (MTT) [20% - 25% weightage]: Conducted midway through the semester covering 50% syllabus.
+  * End-Term Examination (ETE) [50% - 60% weightage]: Comprehensive examination at the end of the semester covering the entire syllabus.
+  * Practical & Lab Evaluation: Continuous lab performance + viva-voce + end-term lab experiment.
+- Examination Eligibility:
+  * Minimum 75% aggregate attendance is mandatory in each individual course to be eligible to sit for End-Term Exams.
+  * Clear all pending fee dues and possess an approved online Admit Card generated via UMS.
+- Admit Card & Seating Plan:
+  * Admit cards are downloadable from UMS 5–7 days before exam commencement.
+  * Detailed seating plan with Block, Room Number, and Desk Number is updated daily on the UMS App and notice boards.
+- Reappear / Backlog Policy:
+  * Students receiving 'F' or 'E' grade must register for Reappear Examination through UMS by paying the prescribed reappear fee (approx. Rs. 300 - Rs. 500 per subject).
+  * Reappear exams are held along with regular ETE in the subsequent semester or during the Summer Term.
+- Answer Script Scrutiny & Revaluation:
+  * Scrutiny: Students can inspect evaluated answer scripts on scheduled post-exam inspection days.
+  * Revaluation: If unsatisfied, students can apply for formal revaluation via UMS within the specified deadline (revaluation fee applies).
+- Unfair Means (UFM): Strict zero-tolerance policy against cheating, carrying unauthorized papers, mobile phones, or smartwatches into examination halls. UFM committee penalties range from cancellation of paper to semester rustication.
 
-Room Types and Fees (Approximate per year):
-- Non-AC Shared Room (3-4 students): Rs. 70,000 to Rs. 80,000 per year
-- Non-AC Double Sharing: Rs. 80,000 to Rs. 90,000 per year
-- AC Double Sharing Room: Rs. 1,00,000 to Rs. 1,20,000 per year
-- AC Single Room: Rs. 1,40,000 to Rs. 1,60,000 per year
+---
 
-Mess/Food charges: Rs. 45,000 to Rs. 55,000 per year (breakfast, lunch, evening snacks, dinner)
+## 💰 FEES STRUCTURE & PAYMENT POLICIES
+Standard Programme Fees (Per Semester - Approximate, before scholarships):
+- B.Tech CSE (Core / Specialization): Rs. 1,40,000 to Rs. 2,40,000 per semester (effective fees significantly lower with LPUNEST scholarships up to 60-100%).
+- B.Tech other branches (ME, CE, ECE, EEE): Rs. 1,20,000 to Rs. 1,60,000 per semester.
+- BBA / B.Com: Rs. 80,000 to Rs. 1,20,000 per semester.
+- MBA (Standard / Specialized): Rs. 1,50,000 to Rs. 2,50,000 per semester.
+- BCA / B.Sc IT: Rs. 80,000 to Rs. 1,10,000 per semester.
+- B.Pharm: Rs. 1,20,000 to Rs. 1,40,000 per semester.
+- B.Sc (Hons) Agriculture: Rs. 1,20,000 per semester.
+- B.A. / B.Sc Basic Sciences: Rs. 50,000 to Rs. 80,000 per semester.
+- Other Mandatory Charges (Annual / One-time):
+  * Examination Fee: Rs. 2,000 - Rs. 4,000 per semester.
+  * Registration / Admission Fee (One-Time): Rs. 10,000 - Rs. 15,000.
+  * Uniform / Kit Fee (where applicable): Rs. 5,000 - Rs. 8,000.
+- Fee Payment Modes:
+  * Online through UMS / LPU Pay Portal (Debit Card, Credit Card, Net Banking, UPI, Paytm).
+  * Demand Draft in favor of "Lovely Professional University" payable at Jalandhar.
+- Late Fee Penalties: Strict late fees apply per day if fees are not deposited before the semester due date (published on UMS). Non-payment results in portal block and debarment from attendance.
+- Refund Policy: As per UGC guidelines, proportionate refunds are granted upon formal withdrawal applied through UMS within the national admission deadline.
 
-Hostel Facilities:
-- 24/7 security with CCTV surveillance
-- High-speed Wi-Fi throughout campus
-- Gymnasium and fitness center
-- Laundry service
-- Common room with TV
-- Dedicated study rooms
-- Medical center on campus available 24/7
-- ATM and convenience stores inside campus
-- Regular housekeeping
-- Visiting hours for guests: 10 AM to 6 PM
+---
 
-Hostel allotment is on first-come-first-served basis after admission confirmation.
-Contact: hostel@lpu.in
+## 🎓 SCHOLARSHIPS & FINANCIAL ASSISTANCE
+LPU has awarded over Rs. 100+ Crores in scholarships to deserving students.
 
-## EXAM SCHEDULE AND ACADEMIC CALENDAR
-LPU follows a semester system with two semesters per year.
+1. LPUNEST Score-Based Scholarships:
+   - Category I Cutoff (Top bracket): Highest scholarship bracket (up to 50% - 60% fee waiver on tuition per semester).
+   - Category II Cutoff: Moderate scholarship bracket (30% - 40% waiver).
+   - Category III Cutoff: Standard scholarship bracket (20% - 25% waiver).
 
-Odd Semester (July to November):
-- Classes begin: Last week of July
-- Mid-term exams: September
-- End-term exams: November to December
-- Results: Within 30-45 days
+2. Qualifying Exam / Board Merit Scholarships:
+   - 95% and above in 12th / Graduation: Maximum scholarship bracket.
+   - 90% to 94.99%: Upper bracket fee waiver.
+   - 80% to 89.99%: Standard bracket fee waiver.
 
-Even Semester (January to May):
-- Classes begin: Second week of January
-- Mid-term exams: March
-- End-term exams: May
-- Results: Within 30-45 days
+3. National Level Entrance Exam Scores:
+   - Scholarships granted based on high percentiles in JEE Main, NEET, CUET, CAT, MAT, XAT, CMAT, GATE, CLAT, NATA.
 
-Important Rules:
-- Minimum 75% attendance is mandatory to appear in final exams
-- Hall tickets are issued online through UMS (University Management System) portal one week before exams
-- Supplementary exams held in June for students who fail (re-appear fee applicable)
-- Internal assessment includes assignments, quizzes, and class tests
-- Theory and practical exams are conducted separately
+4. Special Category & Welfare Scholarships:
+   - Sports & Athletics: Up to 100% full fee waiver + free hostel & food for National/International medalists.
+   - Cultural, Fine Arts & Co-Curricular: For winners in National Youth Festivals and AIU competitions.
+   - Defence & Central Armed Police Forces (CAPF): Special fee concessions for wards of serving and retired defence personnel, gallantry award winners, and war widows.
+   - Differently Abled (PwD) & Orphan Students: Special financial aid and fee assistance.
+   - Single Girl Child / Siblings Studying at LPU: Sibling concession of 10% on tuition fee.
 
-Students must carry their hall ticket and college ID card to every exam.
+5. Scholarship Continuation Criteria:
+   - Minimum CGPA (usually 7.0 or above) with no backlogs and no disciplinary issues to maintain scholarship in subsequent years.
 
-## LIBRARY
-The LPU Central Library is one of the best in India.
-- Open hours: 8:00 AM to 12:00 AM (midnight) daily
-- Extended hours during exams
-- Resources: Over 5 lakh books and e-books
-- Access to journals, magazines, newspapers, and research papers
-- Online databases: IEEE, EBSCO, DELNET, Springer (accessible through UMS account)
-- Borrowing rules: Undergraduates can borrow 3 books for 7 days
-- Late fine applies for overdue books
-- Reference books, journals, project reports must be used inside library only
+---
 
-## STUDENT CLUBS AND ACTIVITIES
-LPU has over 350 student organizations across 18+ categories registered under Division of Students Affairs (DSA).
+## 🏠 HOSTEL & RESIDENTIAL LIFE
+LPU has one of the largest on-campus residential complexes in Asia with separate gated boys' and girls' hostels (Apartments and Standard Hostels).
 
-Technical Clubs: Robotics, Coding, AI and Machine Learning, Cybersecurity, Electronics
-Cultural Clubs: Dance, Music, Theatre, Photography, Film Making
-Social Clubs: NSS (National Service Scheme), NCC, Community Service
-Entrepreneurship: E-Cell (Entrepreneurship Cell), Startup clubs
-Sports Clubs: Cricket, Football, Basketball, Volleyball, Badminton, Swimming
+- Room Configurations & Approximate Annual Charges:
+  * Non-AC Standard 4-Seater / 3-Seater: Rs. 70,000 to Rs. 85,000 per academic year.
+  * Non-AC Standard 2-Seater / 1-Seater: Rs. 85,000 to Rs. 1,00,000 per academic year.
+  * AC Standard 4-Seater / 3-Seater: Rs. 95,000 to Rs. 1,15,000 per academic year.
+  * AC Standard 2-Seater / 1-Seater: Rs. 1,15,000 to Rs. 1,60,000 per academic year.
+  * Deluxe Apartments (Attached washroom, Geyser, Fridge, TV, Sofa in common lobby): Rs. 1,40,000 to Rs. 2,10,000 per year.
+- Mess & Food Plans:
+  * Standard Mess: 4 meals daily (Breakfast, Lunch, Evening Snacks with Tea, Dinner). Cost approx. Rs. 40,000 - Rs. 50,000 per year. Options include North Indian, South Indian, and Continental menus.
+  * Ala-Carte & Cafeterias: Over 100+ food outlets across campus (Domino's, Subway, CCD, Nescafe, Chaayos, Roll Xpress, South Indian mess, Chinese stalls).
+- Amenities & Facilities:
+  * High-speed 24x7 Wi-Fi internet connectivity.
+  * Automated laundry service (up to 30–40 garments per month included or token basis).
+  * 24-hour power backup and solar water heating.
+  * Dedicated gymnasium and fitness center inside hostel blocks.
+  * Departmental store, beauty salon, tailor, stationery shops inside hostel courtyards.
+  * 24x7 security, turnstile biometric access gates, and 4,000+ CCTV camera coverage.
+- Hostel In-Out Timings & Curfew:
+  * Campus Entry / Hostel Gate Closing Time: Typically 07:00 PM to 08:00 PM (subject to seasonal circulars).
+  * Late entry without approved gate pass invites fine and SMS notification to parents.
+- Leave & Gate Pass Procedure:
+  * Students must apply for Home Leave / Day Pass online via the UMS App.
+  * Parent approval via IVR automated call or parent portal confirmation is mandatory for leave authorization.
 
-The university conducts 500+ events annually including:
-- Annual cultural fest
-- Technical fest (Lovely Tech Fest)
-- Sports tournaments
-- Hackathons and coding competitions
-- Industry seminars and workshops
+---
 
-Student Council: Acts as a bridge between students and administration. Organizes social, cultural, and academic events.
+## 💼 PLACEMENTS & CAREER DEVELOPMENT
+- Placement Record:
+  * Over 1,000+ global and national corporate recruiters recruit from LPU annually.
+  * Highest Package: Rs. 3 Crore per annum (International) and Rs. 64 LPA (Domestic).
+  * Average Package for Engineering / CS: Rs. 6.5 LPA to 8.5 LPA.
+  * Over 5,000+ students receive multiple job offers each academic cycle.
+- Top Marquee Recruiters:
+  * Tech Giants: Google, Microsoft, Amazon, Apple, Meta, Cisco, Oracle, Adobe, Palo Alto Networks, VMware, Intel, Qualcomm.
+  * IT Services & Consulting: TCS, Infosys, Wipro, Cognizant, Capgemini, Accenture, Deloitte, EY, KPMG, PwC, IBM, Tech Mahindra.
+  * Product & Core Engineering: Bosch, Texas Instruments, Larsen & Toubro (L&T), Siemens, Tata Motors, Ashok Leyland, Hero MotoCorp.
+  * Business & FinTech: Morgan Stanley, Goldman Sachs, JP Morgan Chase, Barclays, HDFC Bank, ICICI Bank, Flipkart.
+- Division of Career Services (DCS):
+  * Dedicated placement cell organizing on-campus drives, pool campus events, and virtual hackathons.
+  * Center for Professional Enhancement (CPE): Provides mandatory aptitude training, soft skills, communication, verbal reasoning, mock interviews, and group discussion classes from 2nd year onwards.
+  * Coding & Tech Training: Specialized training in Data Structures, Algorithms, Competitive Programming (LeetCode/CodeChef), System Design, and Full Stack technologies.
+- Internships: Both summer internships (2 months) and semester-long / year-long final semester internships with stipends ranging from Rs. 20,000 to Rs. 1,20,000 per month.
 
-Grievance Redressal: Students can raise concerns through E-Samadhan portal or Student Grievance Redressal Committee (SGRC).
+---
 
-## TRANSPORT FACILITIES
-LPU provides dedicated transport services.
-- Bus services connect campus to Jalandhar, Amritsar, Ludhiana, Phagwara city, and other major cities in Punjab
-- Regular shuttle service between campus gates and internal locations
-- International students get complimentary pickup from airport (subject to advance booking and group arrival conditions)
-- University transport is regulated for punctuality and safety
+## 🏅 ACCREDITATION, APPROVALS & GLOBAL RANKINGS
+- National Assessment and Accreditation Council (NAAC): Accredited with the highest grade "NAAC A++" with a score of 3.68 out of 4.0 (among the highest for any private university in India).
+- UGC Graded Autonomy: Conferred Category-I Autonomy status by the University Grants Commission (UGC).
+- Statutory Approvals:
+  * Approved by AICTE (All India Council for Technical Education).
+  * Approved by BCI (Bar Council of India) for Law programmes.
+  * Approved by PCI (Pharmacy Council of India) for Pharmacy courses.
+  * Approved by COA (Council of Architecture) for Architecture courses.
+  * Accredited by ICAR (Indian Council of Agricultural Research) for B.Sc (Hons) Agriculture.
+  * Approved by NCTE (National Council for Teacher Education) for Education programmes.
+- Global & National Rankings (2025–2026):
+  * Times Higher Education (THE) World University Rankings 2026: 501–600 Global Band; Ranked 5th in India overall.
+  * THE Impact Rankings 2026 (UN Sustainable Development Goals): Ranked 1st in India and 23rd Globally.
+  * QS Asia University Rankings 2026: Ranked 187th in Asia and 7th among private universities in India.
+  * NIRF Rankings 2025 (Ministry of Education, Govt. of India): Ranked 31st overall among all universities in India.
+  * WURI (World University Rankings for Innovation) 2026: Ranked 4th in India and 78th globally.
 
-## PLACEMENT AND CAREER
-- 850+ companies visit LPU every year for campus recruitment
-- Top recruiters: TCS, Infosys, Wipro, Amazon, Google, Deloitte, Samsung, IBM, Capgemini, Microsoft, Accenture
-- Highest package offered: 2.5 Crore per annum (international)
-- Average package for B.Tech: Rs. 4 to 6 LPA
-- Career Development Cell (CDC) helps with resume building, mock interviews, and career guidance
-- LPU alumni network spans across 50+ countries
+---
 
-## CAMPUS FACILITIES
-- 600-acre campus in Phagwara, Punjab
-- International standard labs and research centers
-- Sports complex with Olympic-size swimming pool
-- Cricket ground, football field, basketball courts, badminton courts, tennis courts
-- Multiple cafeterias and food courts with variety of cuisines
-- Banks (State Bank of India, HDFC) and multiple ATMs on campus
-- Shopping outlets and stationery shops inside campus
-- Medical center with ambulance and pharmacy facility
-- Post office on campus
-- Travel desk for booking tickets
+## 🏢 SCHOOLS, FACULTIES & DEPARTMENTS
+1. School of Computer Science & Engineering (Block 34, 36, 38)
+2. Mittal School of Business (Block 14)
+3. School of Electronics & Electrical Engineering (Block 32)
+4. School of Mechanical & Aerospace Engineering (Block 30, 31)
+5. School of Civil Engineering & Infrastructure (Block 29)
+6. School of Computer Applications (Block 34)
+7. School of Pharmaceutical Sciences (Block 27)
+8. School of Bio-Engineering and Biosciences (Block 28)
+9. School of Agriculture (Block 35)
+10. School of Law (Block 25)
+11. School of Architecture & Interior Design (Block 26)
+12. School of Fashion Design & Technology (Block 26)
+13. School of Animation, Multimedia & Fine Arts (Block 26)
+14. School of Hotel Management & Tourism (Block 13 - UniHotel)
+15. School of Physical Sciences (Physics, Chemistry, Maths - Block 28)
+16. School of Education & Physical Education (Block 18)
+17. School of Humanities, Languages & Social Sciences (Block 14)
+18. School of Journalism, Film & Creative Arts (Block 26)
 
-## CONTACT INFORMATION
-University Address: Lovely Professional University, Jalandhar - Delhi G.T. Road (NH-1), Phagwara - 144411, Punjab, India
-Toll-Free Admissions: 1800-102-4431
-Phone: +91-1824-517000
-Email: admissions@lpu.in
-Website: www.lpu.in
-Admission Portal: admission.lpu.in
-UMS (Student Portal): ums.lpu.in
+---
 
-Office Hours: Monday to Saturday, 9:00 AM to 5:00 PM
-Principal/Vice Chancellor Office: vc@lpu.in
-Hostel Office: hostel@lpu.in
-Placement Office: placement@lpu.in
-International Students Office: international@lpu.in
+## 🏟️ CAMPUS INFRASTRUCTURE & AMENITIES
+- Central Library (Dr. S. Radhakrishnan Central Library - Block 15):
+  * 9-story automated library holding over 5,00,000 books, 30,000+ national/international journals, and subscriptions to IEEE, EBSCO, ScienceDirect, Springer, JSTOR, DELNET.
+  * Open from 8:00 AM to 12:00 Midnight daily (extended 24-hour reading rooms during exams).
+- UniMall (On-Campus Shopping Mall):
+  * 5-story shopping and entertainment arcade containing lifestyle stores, branded apparel, electronics, opticians, banks, photo studios, printing shops, food courts, and bowling alley.
+- Healthcare & UniHospital:
+  * 100-bedded multi-speciality on-campus hospital providing 24x7 emergency medical services, resident doctors, ICU, ambulances, dental clinic, diagnostic lab, and pharmacy.
+  * Free basic consultations and medical first aid for all enrolled students.
+- Sports Complex & Indoor Stadium (Shanti Devi Mittal Indoor Sports Complex):
+  * Olympic-size all-weather indoor swimming pool with diving boards.
+  * 12 indoor badminton courts, 6 squash courts, wooden basketball courts, wrestling arenas, shooting range.
+  * Full-size outdoor floodlit cricket stadium, FIFA-standard football ground, athletic track, volleyball and tennis courts.
+- Shanti Devi Mittal Auditorium:
+  * Massive air-conditioned auditorium with 2,500+ seating capacity and state-of-the-art acoustics, hosted world leaders, Nobel laureates, and film personalities.
+- Banking & Postal Services:
+  * On-campus full branches of State Bank of India (SBI), Punjab National Bank (PNB), HDFC Bank with 15+ ATMs across academic and hostel blocks.
+  * Full-fledged Indian Post Office and courier drop centers inside campus.
+- Transportation Fleet:
+  * Over 200+ university buses connecting LPU campus with Jalandhar, Phagwara, Ludhiana, Amritsar, Hoshiarpur, Kapurthala, and Nawanshahr.
 
-## RANKINGS AND ACHIEVEMENTS
-LPU is ranked among the top universities in India and the world:
-- Times Higher Education (THE) World University Rankings 2026: Ranked 5th in India, 501-600 globally
-- QS World University Rankings Asia 2026: Ranked 187th in Asia and 7th among private universities in India
-- NIRF Rankings 2025: Ranked 31st among all universities in India
-- World University Rankings for Innovation (WURI) 2026: Ranked 4th in India and 78th globally
-- THE Sustainability Impact Rankings 2026: Ranked 1st in India and 23rd globally
-- NAAC A++ Grade with score of 3.68/4.0
-- UGC Category-I Graded Autonomy University
-- 34 LPU faculty members ranked among World's Top 2% Scientists by Stanford University (2024)
+---
 
-## SCHOOLS AND DEPARTMENTS
-LPU is organized into multiple schools:
-- School of Engineering and Technology (B.Tech, M.Tech in CS, ECE, Mechanical, Civil, Electrical, Chemical)
-- Mittal School of Business (BBA, MBA, B.Com, M.Com)
-- School of Computer Applications (BCA, MCA)
-- School of Sciences (B.Sc, M.Sc in Physics, Chemistry, Biology, Mathematics)
-- School of Bio Sciences and Technology
-- School of Agriculture (B.Sc Agriculture, M.Sc Agriculture - ICAR accredited)
-- School of Pharmacy and Paramedical Sciences (B.Pharm, M.Pharm, D.Pharm)
-- School of Law (BA LLB, LLB - BCI approved)
-- School of Architecture and Design (B.Arch, B.Des, M.Des - COA approved)
-- School of Hotel Management and Tourism
-- School of Fashion Design and Technology
-- School of Education (B.Ed, M.Ed - NCTE approved)
-- School of Humanities, Social Sciences and Languages
-- School of Arts and Multimedia (Animation, Fine Arts, Performing Arts)
+## 👨‍🎓 STUDENT SERVICES, UMS PORTAL & GRIEVANCE REDRESSAL
+- UMS Portal (University Management System - https://ums.lpu.in and LPU Touch App):
+  * Single sign-on with Student Registration Number (e.g., 121XXXXX) and password.
+  * Features: Daily timetable, live attendance tracker, assignment submission, marks and grade cards, fee receipts, course syllabus, LMS recorded lectures, admit cards, library book renewal, gate pass application.
+- Student Service Centre (Division of Student Welfare - Block 30):
+  * Helpdesk for issuing Bonafide Certificates, Character Certificates, Medium of Instruction Certificates, Transcript processing, ID card re-issue, and Bus passes.
+- Leave & On-Duty (OD) Procedures:
+  * Duty Leaves (DL): Awarded for participation in approved university sports, cultural events, hackathons, or official placement drives. Applied online through UMS with teacher coordinator approval.
+  * Medical Leaves (ML): Must be verified by the university Chief Medical Officer (CMO) at UniHospital within 3 days of returning to campus.
+- Grievance Redressal & E-Samadhan:
+  * Online E-Samadhan ticketing portal on UMS where students can log academic, hostel, fee, or administrative complaints with guaranteed SLA turnaround time.
+  * Student Grievance Redressal Committee (SGRC) and Women Grievance / ICC Cell for confidential conflict resolution.
 
-## INTERNATIONAL PROGRAMS AND COLLABORATIONS
-LPU has strong international presence:
-- 550+ international partnerships with universities in 80+ countries
-- Partner countries include USA, UK, Australia, Canada, Germany, Russia, France, Singapore
-- Student semester exchange programs available
-- International credit transfer facility
-- Summer and winter school programs with foreign universities
-- International internship opportunities
-- Students from 50+ countries study at LPU campus
-- European Commission-funded research projects participation
-- Member of Association of Commonwealth Universities
-Contact for international programs: international@lpu.in or visit lpu.in/international
+---
 
-## RESEARCH AND INNOVATION
-LPU is a research-intensive university:
-- 27,850+ research publications in international journals
-- 2,96,000+ Scopus citations with H-index of 183
-- 10,000+ intellectual property (patent) filings
-- Research collaboration with Brookhaven National Laboratory (USA)
-- CSIR laboratory partnerships
-- Defence Institute of High Altitude Research (DIHAR) collaboration
-- 34 faculty members among World's Top 2% Scientists (Stanford University 2024)
+## 📜 RULES, ATTENDANCE & CODE OF CONDUCT
+1. The 75% Attendance Rule:
+   - Mandatory minimum 75% attendance in every individual theory and practical course.
+   - Falling below 75% results in "Ineligible / Debarred" (Grade I) status, preventing the student from writing the End-Term Exam (ETE) for that subject.
+2. Identity Card Policy:
+   - Wearing of LPU Smart RFID Student ID Card around the neck is strictly mandatory at all times inside campus, lecture halls, and buses.
+3. Zero Tolerance for Ragging:
+   - Ragging in any form (physical, verbal, psychological) is a severe criminal offense under the Supreme Court of India directives.
+   - Punishments include immediate police FIR, expulsion from hostel, permanent rustication from the university. Anti-Ragging toll-free helpline: 1800-180-5522.
+4. Substance & Alcohol Prohibition:
+   - LPU is a strict 100% smoke-free, alcohol-free, and drug-free campus.
+   - Possession or consumption leads to immediate disciplinary suspension, heavy monetary penalties, and legal reporting.
+5. Dress Code & Classroom Etiquette:
+   - Decent, professional attire must be worn in academic blocks. Formal dress code applies on designated days, presentations, and placement drives.
+   - Use of mobile phones inside classrooms, labs, and exam halls is strictly prohibited.
 
-## UMS PORTAL AND STUDENT SERVICES
-UMS (University Management System) is LPU's central student portal: ums.lpu.in
-Login with Student Registration Number and admission password.
-Features available on UMS:
-- View exam schedule and download admit cards/hall tickets
-- Check real-time attendance percentage
-- View grades, CGPA, and academic performance
-- Register for re-appear (supplementary) exams
-- Apply for re-evaluation of answer booklets
-- Access course materials, syllabi, and academic scheme
-- View and pay fee receipts online
-- Access university policies and rules
-- Raise grievances through E-Samadhan portal
-- Download bonafide certificate and other documents
+---
 
-Assessment Pattern at LPU:
-- Continuous Assessment (CA): 20-30% weightage (assignments, quizzes, class tests)
-- End-Term Examination: 70-80% weightage
-- Minimum 75% attendance required to sit in end-term exams
-- Results declared within 30-45 days on UMS portal
-- Students must carry ID card and admit card to every exam
+## 📞 CONTACTS, HELPLINES & IMPORTANT DIRECTORY
+- University Main EPABX: +91-1824-517000 / 01824-404404
+- Admissions Helpline (Toll-Free): 1800-102-4431 / 1800-274-0615
+- Admissions Email: admissions@lpu.in
+- International Admissions: international@lpu.in | +91-1824-444007
+- Examination Wing: examinations@lpu.in
+- Distance Education (LPUDE): odl.admissions@lpu.in | 01824-521360
+- Division of Student Welfare (DSW): dsw@lpu.in
+- Hostel Chief Warden Office: chiefwarden@lpu.in | hostel@lpu.in
+- Placement & Corporate Relations (DCS): placements@lpu.in
+- UniHospital Emergency: +91-1824-517200 / Ext: 7200
+- University Security Control Room: +91-1824-517100 / Ext: 7100
+- Official Mailing Address: Lovely Professional University, Jalandhar-Delhi G.T. Road (NH-1), Phagwara, Punjab (India) - 144411.
 
-## ONLINE AND DISTANCE EDUCATION
-LPU Distance Education (LPUDE) offers programs for working professionals:
-- UG programs: BA, B.Com, BBA, BCA
-- PG programs: MA, M.Com, MBA, MCA
-- Recognized by Distance Education Bureau (DEB)
-- Flexible online study material and recorded lectures
-- Exams at designated centers across India
-- Website: lpude.in
+---
 
-## STUDENT CODE OF CONDUCT
-Important rules every LPU student must follow:
-- Always carry your LPU ID card on campus
-- Minimum 75% attendance mandatory in every subject
-- Ragging is strictly prohibited - zero tolerance policy
-- Mobile phones not allowed inside examination halls
-- Dress code required in classrooms and labs
-- Hostel curfew timings must be strictly observed
-- Violation of rules may result in fine, suspension, or expulsion
-- Check UMS regularly for notices, schedules, and updates
-- Use E-Samadhan portal for any grievances or complaints
+## 📰 NOTICES & CURRENT ANNOUNCEMENTS
+- Admissions 2026: LPUNEST 2026 national entrance and scholarship test is conducting applications for multiple phases. Apply online at admission.lpu.in.
+- Course Registrations: Students must register for upcoming semester subjects on UMS within the announced registration window.
+- Cultural Fests:
+  * "ONE INDIA": Annual mega-cultural national festival celebrating cultural unity and traditions of Indian states.
+  * "ONE WORLD": International cultural festival celebrating the art, dance, food, and culture of 50+ foreign nations represented by international students.
+  * "SPECTRA": Inter-school youth festival spanning music, theatre, literary, and dance competitions.
+- Convocation: Annual University Convocation honoring graduating degree recipients held at the Shanti Devi Mittal Auditorium with national dignitaries.
+
+---
+
+## 🤖 AI FREQUENTLY ASKED QUESTIONS (FAQ)
+
+Q1: What is the minimum attendance required at LPU to write exams?
+A1: Students must maintain a minimum of 75% attendance in each registered subject. If attendance drops below 75%, the student becomes debarred (Grade I) and cannot sit for the End-Term Exam for that subject.
+
+Q2: How can I apply for LPUNEST scholarship?
+A2: Register on admission.lpu.in, book your preferred exam slot, and appear for the LPUNEST test. Based on your test score bracket (Category I, II, or III), you will be awarded tuition fee waivers up to 50-60%.
+
+Q3: What are the library timings at LPU?
+A3: The Dr. S. Radhakrishnan Central Library (Block 15) is open daily from 8:00 AM to 12:00 Midnight. During exam periods, reading halls remain open 24 hours.
+
+Q4: What is the procedure for taking hostel leave or a gate pass?
+A4: Log into the UMS App / Portal, navigate to "Hostel Leave / Gate Pass", fill in leave dates and reason, and submit. The system sends an automated approval request to the parent's registered contact. Once approved, an electronic gate pass QR code is generated.
+
+Q5: What are the highest and average placement packages at LPU?
+A5: The highest international package is Rs. 3 Crore per annum, and the highest domestic package is Rs. 64 LPA. The average package for Engineering/Computer Science graduates ranges from Rs. 6.5 to 8.5 LPA.
+
+Q6: How is CGPA calculated at LPU?
+A6: LPU uses a 10-point scale (Grade O = 10, A+ = 9, A = 8, B+ = 7, B = 6, C = 5, P = 4, F/E/I = 0). SGPA and CGPA are computed as the sum of (Course Credit × Grade Point Earned) divided by the total registered credits.
+
+Q7: What is the difference between MTT and ETE?
+A7: MTT (Mid-Term Test) is conducted midway through the semester covering 50% syllabus (approx. 20-25% weightage). ETE (End-Term Examination) is conducted at semester end covering the entire syllabus (approx. 50-60% weightage).
+
+Q8: Can I change my room or hostel after allotment?
+A8: Room change requests can be submitted through UMS during designated room change windows at the start of the academic semester, subject to room availability and Chief Warden approval.
+
+Q9: What happens if I fail a subject at LPU?
+A9: If you receive an 'F' or 'E' grade, you must apply for a Reappear Examination via UMS by paying the nominal reappear fee. You can clear the reappear exam in the next semester's ETE or during the summer term.
+
+Q10: Where is the UniHospital located and what services does it offer?
+A10: UniHospital is located on campus and offers 24x7 emergency medical care, resident doctors, OPD, diagnostic lab, ICU, ambulances, and an attached pharmacy. Basic consultation is free for enrolled students.
