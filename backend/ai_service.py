@@ -14,21 +14,22 @@ generation_config = {
     "max_output_tokens": 850,
 }
 
-# High-volume models with automatic fallback if one hits a rate limit
+# High-volume, reliable models in priority order
 FALLBACK_MODELS = [
+    "gemini-2.5-flash-lite",
     "gemini-2.5-flash",
-    "gemini-2.0-flash",
-    "gemini-1.5-flash",
-    "gemini-1.5-flash-8b",
-    "gemini-1.5-pro",
+    "gemini-flash-latest",
+    "gemini-3.5-flash-lite",
+    "gemini-3.5-flash",
+    "gemini-3.7-flash",
     "gemini-3.6-flash",
 ]
 
 
 def get_ai_answer(question: str, context: str) -> str:
     """
-    Send user question to Gemini with automatic multi-model fallback
-    to prevent 429 rate limit errors.
+    Send user question to Gemini with multi-model fallback.
+    If all external API models are rate-limited, safely returns the verified LPU context.
     """
     prompt = f"""You are a smart, friendly, and ultra-fast AI student companion for Lovely Professional University (LPU).
 You understand student queries in English, Hindi, and Hinglish (e.g., "hostel me cooler allowed hai?", "75% attendance rule kya hai?").
@@ -48,18 +49,19 @@ STUDENT'S QUESTION:
 
 DIRECT ANSWER:"""
 
-    last_error = ""
-
-    # Try each model in sequence if a 429 quota or transient error occurs
+    # 1. Try available Gemini models in sequence
     for model_name in FALLBACK_MODELS:
         try:
             model = genai.GenerativeModel(model_name, generation_config=generation_config)
             response = model.generate_content(prompt)
             if response and response.text:
-                return response.text
-        except Exception as e:
-            last_error = str(e)
-            # If rate limit or model unavailable, try next model in fallback list
+                return response.text.strip()
+        except Exception:
+            # Silently fallback to next model
             continue
 
-    return f"Sorry, the AI service is currently busy. Please try again in a few moments. (Error: {last_error})"
+    # 2. Resilient Smart Fallback: If all API endpoints hit quota limits, return direct verified context
+    if context and len(context.strip()) > 20:
+        return f"Here is the verified information from the LPU database regarding your query:\n\n{context[:900]}"
+
+    return "I don't have verified details on this specific query. Please contact LPU Admissions at 1800-102-4431 or admissions@lpu.in."
