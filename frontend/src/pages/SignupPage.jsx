@@ -25,8 +25,8 @@ export default function SignupPage() {
     } catch (err) {
       const detail = err.response?.data?.detail;
       const status = err.response?.status;
-      const url = err.config?.url;
-      setError(`Error ${status}: ${detail} (URL: ${url})`);
+      const fullUrl = (err.config?.baseURL || "") + (err.config?.url || "");
+      setError(`Error ${status}: ${detail} | Full URL: ${fullUrl}`);
     } finally {
       setLoading(false);
     }
