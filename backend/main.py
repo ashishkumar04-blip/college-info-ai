@@ -21,6 +21,7 @@ app.add_middleware(
         "https://college-info-ai.vercel.app",
         "https://college-info-ai-xr5f.vercel.app",
     ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
