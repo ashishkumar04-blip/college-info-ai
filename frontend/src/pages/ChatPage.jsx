@@ -347,11 +347,22 @@ export default function ChatPage() {
       }, 8);
     } catch (err) {
       console.error("Chat error:", err);
-      const detail = err.response?.data?.detail;
-      const errorText = detail
-        ? `Error: ${detail}`
-        : "Sorry, I couldn't reach the server. Please check your connection and try again.";
-      setMessages((prev) => [...prev, { sender: "ai", text: errorText, time }]);
+      if (err.response?.status === 401) {
+        setMessages((prev) => [
+          ...prev,
+          {
+            sender: "ai",
+            text: "🔒 Your login session has expired. Please click **Logout** at the top right and log in again.",
+            time,
+          },
+        ]);
+      } else {
+        const detail = err.response?.data?.detail;
+        const errorText = detail
+          ? `Error: ${detail}`
+          : "Sorry, I couldn't reach the server. Please check your connection and try again.";
+        setMessages((prev) => [...prev, { sender: "ai", text: errorText, time }]);
+      }
     } finally {
       setLoading(false);
     }
