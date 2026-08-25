@@ -14,15 +14,14 @@ generation_config = {
     "max_output_tokens": 850,
 }
 
-# High-volume, reliable models in priority order
+# Verified active high-volume models in exact priority order
 FALLBACK_MODELS = [
-    "gemini-2.5-flash-lite",
-    "gemini-2.5-flash",
-    "gemini-flash-latest",
+    "gemini-flash-lite-latest",
     "gemini-3.5-flash-lite",
     "gemini-3.5-flash",
     "gemini-3.7-flash",
     "gemini-3.6-flash",
+    "gemini-flash-latest",
 ]
 
 
@@ -49,7 +48,7 @@ STUDENT'S QUESTION:
 
 DIRECT ANSWER:"""
 
-    # 1. Try available Gemini models in sequence
+    # 1. Try verified high-volume Gemini models in sequence
     for model_name in FALLBACK_MODELS:
         try:
             model = genai.GenerativeModel(model_name, generation_config=generation_config)
@@ -57,7 +56,7 @@ DIRECT ANSWER:"""
             if response and response.text:
                 return response.text.strip()
         except Exception:
-            # Silently fallback to next model
+            # Silently fallback to next model in list
             continue
 
     # 2. Resilient Smart Fallback: If all API endpoints hit quota limits, return direct verified context
