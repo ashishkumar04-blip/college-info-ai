@@ -298,13 +298,13 @@ export default function ChatPage() {
       const response = await API.post("/chat/ask", { question: qToSend });
       const fullAnswer = response.data.answer;
 
-      // Stream / Typewriter effect
+      // Fast, snappy streaming effect
       let currentLength = 0;
       const aiMessagePlaceholder = { sender: "ai", text: "", time };
       setMessages((prev) => [...prev, aiMessagePlaceholder]);
 
       const interval = setInterval(() => {
-        currentLength += 8;
+        currentLength += 24;
         if (currentLength >= fullAnswer.length) {
           clearInterval(interval);
           playSound("receive");
@@ -321,7 +321,7 @@ export default function ChatPage() {
             return updated;
           });
         }
-      }, 15);
+      }, 8);
     } catch (err) {
       console.error("Chat error:", err);
       const detail = err.response?.data?.detail;
