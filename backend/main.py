@@ -16,13 +16,8 @@ app = FastAPI(
 # Allow the React frontend (running on port 3000) to call this backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "https://college-info-ai.vercel.app",
-        "https://college-info-ai-xr5f.vercel.app",
-    ],
-    allow_origin_regex=r"https://.*\.vercel\.app",
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
