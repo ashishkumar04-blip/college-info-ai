@@ -123,7 +123,7 @@ function renderInlineFormatting(text, isDark) {
   return parts.length > 0 ? parts : text;
 }
 
-// Web Audio synthesizer for pleasant UI sound effects
+// Web Audio synthesizer
 function playSound(type = "send") {
   try {
     const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -150,7 +150,7 @@ function playSound(type = "send") {
       osc.stop(ctx.currentTime + 0.15);
     }
   } catch {
-    // Ignore audio failures if restricted
+    // Ignore audio failures
   }
 }
 
@@ -167,7 +167,8 @@ export default function ChatPage() {
   const [followUps, setFollowUps] = useState([]);
   const [isDark, setIsDark] = useState(false);
   const [activeTab, setActiveTab] = useState("all");
-  const [activeModal, setActiveModal] = useState(null); // 'cgpa' | 'attendance' | 'fees' | null
+  const [activeModal, setActiveModal] = useState(null); // 'cgpa' | 'attendance' | 'fees' | 'placements' | null
+  const [installPrompt, setInstallPrompt] = useState(null);
 
   // CGPA Calculator State
   const [courses, setCourses] = useState([
@@ -190,6 +191,28 @@ export default function ChatPage() {
 
   const bottomRef = useRef(null);
   const speechRecognitionRef = useRef(null);
+
+  // PWA Install Prompt Listener
+  useEffect(() => {
+    const handleBeforeInstall = (e) => {
+      e.preventDefault();
+      setInstallPrompt(e);
+    };
+    window.addEventListener("beforeinstallprompt", handleBeforeInstall);
+    return () => window.removeEventListener("beforeinstallprompt", handleBeforeInstall);
+  }, []);
+
+  const handleInstallApp = async () => {
+    if (installPrompt) {
+      installPrompt.prompt();
+      const choice = await installPrompt.userChoice;
+      if (choice.outcome === "accepted") {
+        setInstallPrompt(null);
+      }
+    } else {
+      alert("📲 To install this app on your phone:\n\n• Android (Chrome): Tap the 3 dots (⋮) > 'Install app' or 'Add to Home screen'\n• iPhone (Safari): Tap the Share button (⎋) > 'Add to Home Screen'");
+    }
+  };
 
   // Load chat history on open
   useEffect(() => {
@@ -263,13 +286,13 @@ export default function ChatPage() {
     const suggestions = [];
 
     if (text.includes("hostel") || text.includes("room") || text.includes("mess")) {
-      suggestions.push("How to apply for a hostel gate pass on UMS?", "What are the mess meal timings?", "What are the curfew hours?");
+      suggestions.push("How to apply for a hostel gate pass on UMS?", "What are the mess meal timings?", "Hostel me cooler & electric items allowed hai?");
     } else if (text.includes("fee") || text.includes("scholarship") || text.includes("cost")) {
-      suggestions.push("What are the LPUNEST scholarship brackets?", "How to pay fees via LPU Pay portal?", "Are there sibling discounts?");
+      suggestions.push("What are the LPUNEST scholarship brackets?", "How to pay fees via LPU Pay portal?", "Are there sibling or sports discounts?");
     } else if (text.includes("exam") || text.includes("mtt") || text.includes("ete") || text.includes("attendance")) {
-      suggestions.push("What happens if attendance is below 75%?", "How do I apply for reappear exams?", "How to download the exam admit card?");
+      suggestions.push("75% attendance se kam ho toh kya hota hai?", "How do I apply for reappear exams?", "How to download the exam admit card?");
     } else if (text.includes("placement") || text.includes("salary") || text.includes("job") || text.includes("package")) {
-      suggestions.push("Which top MNCs recruit from LPU?", "What is the average package for CSE?", "How does the Center for Professional Enhancement (CPE) train us?");
+      suggestions.push("Which top MNCs recruit from LPU?", "What is the average package for CSE?", "Super Dream companies ka CGPA cutoff kya hai?");
     } else if (text.includes("admission") || text.includes("lpunest") || text.includes("eligibility")) {
       suggestions.push("What documents are required for admission?", "What is the LPUNEST exam syllabus?", "What B.Tech courses are available?");
     } else {
@@ -298,7 +321,7 @@ export default function ChatPage() {
       const response = await API.post("/chat/ask", { question: qToSend });
       const fullAnswer = response.data.answer;
 
-      // Fast, snappy streaming effect
+      // Fast streaming effect
       let currentLength = 0;
       const aiMessagePlaceholder = { sender: "ai", text: "", time };
       setMessages((prev) => [...prev, aiMessagePlaceholder]);
@@ -383,7 +406,6 @@ export default function ChatPage() {
     }
   };
 
-  // Export Chat to Text File
   const handleExportChat = () => {
     if (messages.length === 0) {
       alert("No messages to export yet!");
@@ -447,14 +469,12 @@ export default function ChatPage() {
 
     const currentRate = att / total;
     if (currentRate >= 0.75) {
-      // How many classes can be safely skipped
       const safeSkips = Math.floor((att - 0.75 * total) / 0.75);
       return {
         text: `🎉 You are safe! You can safely miss ${Math.max(0, safeSkips)} more class(es) without falling below 75%.`,
         color: "#27ae60",
       };
     } else {
-      // How many classes must be attended consecutively
       const needed = Math.ceil((0.75 * total - att) / 0.25);
       return {
         text: `⚠️ Attendance below 75%! You must attend the next ${needed} classes consecutively to be exam eligible.`,
@@ -475,9 +495,9 @@ export default function ChatPage() {
 
   const scholarshipPct = {
     none: 0,
-    cat3: 0.2, // 20%
-    cat2: 0.35, // 35%
-    cat1: 0.5, // 50%
+    cat3: 0.2,
+    cat2: 0.35,
+    cat1: 0.5,
   };
 
   const selectedBaseFee = courseFeeTable[selectedCourse]?.base || 160000;
@@ -508,6 +528,15 @@ export default function ChatPage() {
         inputBg: "#faf5f5",
       };
 
+  const initialSuggestions = [
+    "🎓 How do I get admission at LPU?",
+    "🎯 75% rule ke hisab se bunk kitna allow hai?",
+    "💰 B.Tech CSE ka fees aur scholarship discount kitna hai?",
+    "💼 Super Dream companies ka CGPA cutoff kya hota hai?",
+    "🏠 Hostel gate timings aur leave pass kaise lete hain?",
+    "🏆 LPU ka NAAC A++ grade aur NIRF ranking kya hai?",
+  ];
+
   return (
     <div style={{ ...styles.container, backgroundColor: currentTheme.bg }}>
       {/* Global CSS */}
@@ -533,7 +562,7 @@ export default function ChatPage() {
           <div style={styles.logoCircle}>LPU</div>
           <div>
             <div style={styles.headerTitle}>🎓 College Info AI</div>
-            <div style={styles.headerSubtitle}>Lovely Professional University • Elite Student Companion</div>
+            <div style={styles.headerSubtitle}>Lovely Professional University • Student Super App</div>
           </div>
         </div>
 
@@ -562,6 +591,24 @@ export default function ChatPage() {
             title="Fee & Scholarship Calculator"
           >
             💰 Fee Estimator
+          </button>
+          <button
+            className="btn-hover"
+            style={styles.toolBtn}
+            onClick={() => setActiveModal("placements")}
+            title="Company Placement Cutoffs"
+          >
+            💼 Placement Cutoffs
+          </button>
+
+          {/* PWA Mobile Install Button */}
+          <button
+            className="btn-hover"
+            style={{ ...styles.toolBtn, backgroundColor: "#27ae60", borderColor: "#2ecc71" }}
+            onClick={handleInstallApp}
+            title="Install app to your home screen"
+          >
+            📲 Install App
           </button>
 
           {/* Dark Mode Toggle */}
@@ -626,34 +673,66 @@ export default function ChatPage() {
               Welcome, {user?.name || "Student"}!
             </h2>
             <p style={{ ...styles.emptyText, color: currentTheme.subText }}>
-              I am your human-like AI companion for <strong>Lovely Professional University</strong>. Ask me anything, speak with voice, or launch our interactive calculators above!
+              I am your human-like AI companion for <strong>Lovely Professional University</strong>. Ask me in English or casual Hinglish, speak with voice, or launch our student tools!
             </p>
 
-            {/* Quick Interactive Features Card Grid */}
+            {/* Feature Cards Grid */}
             <div style={styles.featureCardsGrid}>
               <div
                 style={{ ...styles.featureCard, backgroundColor: currentTheme.cardBg, borderColor: currentTheme.border }}
                 onClick={() => setActiveModal("cgpa")}
               >
-                <div style={{ fontSize: "28px" }}>📊</div>
-                <div style={{ fontWeight: "700", color: isDark ? "#fff" : "#8B0000", fontSize: "14px" }}>CGPA Adder</div>
-                <div style={{ fontSize: "11px", color: currentTheme.subText }}>Compute SGPA & Multi-Semester CGPA</div>
+                <div style={{ fontSize: "26px" }}>📊</div>
+                <div style={{ fontWeight: "700", color: isDark ? "#fff" : "#8B0000", fontSize: "13px" }}>CGPA Adder</div>
+                <div style={{ fontSize: "11px", color: currentTheme.subText }}>SGPA & Target CGPA</div>
               </div>
               <div
                 style={{ ...styles.featureCard, backgroundColor: currentTheme.cardBg, borderColor: currentTheme.border }}
                 onClick={() => setActiveModal("attendance")}
               >
-                <div style={{ fontSize: "28px" }}>🎯</div>
-                <div style={{ fontWeight: "700", color: isDark ? "#fff" : "#8B0000", fontSize: "14px" }}>75% Bunk Meter</div>
-                <div style={{ fontSize: "11px", color: currentTheme.subText }}>Check how many classes you can skip</div>
+                <div style={{ fontSize: "26px" }}>🎯</div>
+                <div style={{ fontWeight: "700", color: isDark ? "#fff" : "#8B0000", fontSize: "13px" }}>75% Bunk Meter</div>
+                <div style={{ fontSize: "11px", color: currentTheme.subText }}>Safe leaves calculator</div>
               </div>
               <div
                 style={{ ...styles.featureCard, backgroundColor: currentTheme.cardBg, borderColor: currentTheme.border }}
                 onClick={() => setActiveModal("fees")}
               >
-                <div style={{ fontSize: "28px" }}>💰</div>
-                <div style={{ fontWeight: "700", color: isDark ? "#fff" : "#8B0000", fontSize: "14px" }}>Fee Calculator</div>
-                <div style={{ fontSize: "11px", color: currentTheme.subText }}>Estimate tuition & scholarship waiver</div>
+                <div style={{ fontSize: "26px" }}>💰</div>
+                <div style={{ fontWeight: "700", color: isDark ? "#fff" : "#8B0000", fontSize: "13px" }}>Fee & Scholarship</div>
+                <div style={{ fontSize: "11px", color: currentTheme.subText }}>LPUNEST discount</div>
+              </div>
+              <div
+                style={{ ...styles.featureCard, backgroundColor: currentTheme.cardBg, borderColor: currentTheme.border }}
+                onClick={() => setActiveModal("placements")}
+              >
+                <div style={{ fontSize: "26px" }}>💼</div>
+                <div style={{ fontWeight: "700", color: isDark ? "#fff" : "#8B0000", fontSize: "13px" }}>Placement Cutoffs</div>
+                <div style={{ fontSize: "11px", color: currentTheme.subText }}>Top MNC eligibility</div>
+              </div>
+            </div>
+
+            {/* Initial Quick Suggestion Chips */}
+            <div style={{ marginTop: "20px" }}>
+              <div style={{ fontSize: "12px", fontWeight: "600", color: isDark ? "#ff8888" : "#8B0000", marginBottom: "8px" }}>
+                🔥 Frequently Asked by LPU Students:
+              </div>
+              <div style={styles.suggestions}>
+                {initialSuggestions.map((s, idx) => (
+                  <button
+                    key={idx}
+                    className="suggestion-btn"
+                    style={{
+                      ...styles.suggestionBtn,
+                      backgroundColor: currentTheme.cardBg,
+                      color: isDark ? "#ff9999" : "#8B0000",
+                      borderColor: isDark ? "#4a2a2a" : "#d98880",
+                    }}
+                    onClick={() => handleSend(s.substring(3))}
+                  >
+                    {s}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
@@ -816,7 +895,7 @@ export default function ChatPage() {
             borderColor: currentTheme.border,
           }}
           type="text"
-          placeholder={isListening ? "Listening... speak now" : "Ask anything about LPU (Admissions, Fees, Placements, Exams)..."}
+          placeholder={isListening ? "Listening... speak now" : "Ask anything in English or Hinglish (Admissions, Fees, Placements, Exams)..."}
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -864,7 +943,6 @@ export default function ChatPage() {
                 </div>
               </div>
 
-              {/* Multi-Semester Aggregator Inputs */}
               <div style={{ display: "flex", gap: "10px", margin: "14px 0" }}>
                 <div style={{ flex: 1 }}>
                   <label style={{ fontSize: "11px", color: currentTheme.subText }}>Previous CGPA (optional):</label>
@@ -889,7 +967,6 @@ export default function ChatPage() {
                 </div>
               </div>
 
-              {/* Course Row Items */}
               <div style={{ maxHeight: "200px", overflowY: "auto", display: "flex", flexDirection: "column", gap: "8px" }}>
                 {courses.map((course, idx) => (
                   <div key={idx} style={{ display: "flex", gap: "8px", alignItems: "center" }}>
@@ -1060,6 +1137,56 @@ export default function ChatPage() {
           </div>
         </div>
       )}
+
+      {/* ================= MODAL: PLACEMENT & COMPANY CUTOFFS ================= */}
+      {activeModal === "placements" && (
+        <div style={styles.modalOverlay} onClick={() => setActiveModal(null)}>
+          <div
+            className="modal-enter"
+            style={{ ...styles.modalContent, maxWidth: "520px", backgroundColor: currentTheme.cardBg, color: currentTheme.text, borderColor: currentTheme.border }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div style={styles.modalHeader}>
+              <h3 style={{ margin: 0, color: isDark ? "#ff7675" : "#8B0000" }}>💼 LPU Placement Cutoffs & Packages</h3>
+              <button style={styles.closeBtn} onClick={() => setActiveModal(null)}>✕</button>
+            </div>
+
+            <div style={{ ...styles.modalBody, maxHeight: "380px", overflowY: "auto" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                {[
+                  { tier: "🔥 Super Dream (20 - 64+ LPA)", companies: "Amazon, Microsoft, Google, Adobe, Cisco, Palo Alto Networks", cutoff: "CGPA 8.0+ / No Backlogs", role: "SDE-1, Cloud Engineer, Security Analyst" },
+                  { tier: "⭐ Dream Tier (7 - 15 LPA)", companies: "TCS Digital, Deloitte, Capgemini Diff, Bosch, Cognizant GenC", cutoff: "CGPA 6.5 - 7.5+", role: "Analyst, Full Stack Dev, Systems Engineer" },
+                  { tier: "🏢 Marquee Corporate (4 - 7 LPA)", companies: "TCS Ninja, Wipro Turbo, Infosys, Tech Mahindra, HCL", cutoff: "CGPA 6.0+", role: "Graduate Trainee, Associate Software Engineer" },
+                  { tier: "📊 Core & Management (5 - 12 LPA)", companies: "Morgan Stanley, HDFC Bank, ICICI, L&T, Tata Motors", cutoff: "CGPA 6.5+", role: "Management Trainee, Core Design Engineer" },
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    style={{
+                      padding: "12px 14px",
+                      borderRadius: "10px",
+                      backgroundColor: isDark ? "#282834" : "#fdf4f4",
+                      border: `1px solid ${isDark ? "#3f3f50" : "#eddada"}`,
+                    }}
+                  >
+                    <div style={{ fontWeight: "700", color: isDark ? "#ff8888" : "#8B0000", fontSize: "13px", marginBottom: "4px" }}>
+                      {item.tier}
+                    </div>
+                    <div style={{ fontSize: "12px", color: currentTheme.text, marginBottom: "3px" }}>
+                      <strong>Top Recruiters:</strong> {item.companies}
+                    </div>
+                    <div style={{ fontSize: "11px", color: "#27ae60", fontWeight: "600", marginBottom: "2px" }}>
+                      <strong>Eligibility:</strong> {item.cutoff}
+                    </div>
+                    <div style={{ fontSize: "11px", color: currentTheme.subText }}>
+                      <strong>Typical Roles:</strong> {item.role}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -1095,7 +1222,7 @@ const styles = {
   },
   headerTitle: { fontSize: "16px", fontWeight: "700", color: "white" },
   headerSubtitle: { fontSize: "11px", opacity: 0.85, color: "white" },
-  headerRight: { display: "flex", alignItems: "center", gap: "8px" },
+  headerRight: { display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" },
   toolBtn: {
     backgroundColor: "rgba(255,255,255,0.18)",
     color: "white",
@@ -1177,25 +1304,41 @@ const styles = {
     textAlign: "center",
     margin: "auto",
     padding: "10px 0 20px 0",
-    maxWidth: "580px",
+    maxWidth: "600px",
   },
   emptyIcon: { fontSize: "46px", marginBottom: "8px" },
   emptyTitle: { margin: "0 0 6px 0", fontSize: "22px", fontWeight: "700" },
   emptyText: { marginBottom: "20px", fontSize: "13px", lineHeight: "1.6" },
   featureCardsGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "10px",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    gap: "8px",
     marginTop: "10px",
   },
   featureCard: {
-    padding: "14px 10px",
+    padding: "12px 8px",
     borderRadius: "12px",
     border: "1px solid",
     cursor: "pointer",
     textAlign: "center",
     transition: "all 0.2s",
     boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+  },
+  suggestions: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "8px",
+    justifyContent: "center",
+  },
+  suggestionBtn: {
+    padding: "8px 14px",
+    borderRadius: "18px",
+    border: "1.5px solid",
+    cursor: "pointer",
+    fontSize: "12px",
+    fontWeight: "500",
+    transition: "all 0.2s ease",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.04)",
   },
   messageRow: {
     display: "flex",
