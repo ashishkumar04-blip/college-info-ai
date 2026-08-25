@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// Use deployed backend URL in production, localhost in development
+// Use Vercel's built-in proxy — no CORS issues!
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "https://college-info-ai-backend.onrender.com/api",
+  baseURL: process.env.REACT_APP_API_URL || "/backend-api",
 });
 
 // Automatically attach the token to every request if logged in
