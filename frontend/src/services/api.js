@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Use Vercel's built-in proxy — no CORS issues!
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "/backend-api",
+  baseURL: "/backend-api",
 });
 
 // Automatically attach the token to every request if logged in
