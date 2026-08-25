@@ -9,7 +9,10 @@ export function AuthProvider({ children }) {
     // Check if user was already logged in (from a previous session)
     const name = localStorage.getItem("user_name");
     const token = localStorage.getItem("token");
-    return name && token ? { name } : null;
+    if (name && token && name !== "undefined" && token !== "undefined" && name !== "null" && token !== "null") {
+      return { name };
+    }
+    return null;
   });
 
   const loginUser = (token, name) => {

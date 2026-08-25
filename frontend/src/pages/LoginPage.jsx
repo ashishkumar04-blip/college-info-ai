@@ -16,8 +16,8 @@ export default function LoginPage() {
     setError("");
     setLoading(true);
     try {
-      const data = await login(email, password);
-      loginUser(data.access_token, data.user_name);
+      const response = await login(email, password);
+      loginUser(response.data.access_token, response.data.user_name);
       navigate("/chat");
     } catch (err) {
       setError(err.response?.data?.detail || "Invalid email or password.");

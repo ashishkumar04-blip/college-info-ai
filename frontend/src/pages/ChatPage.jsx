@@ -61,8 +61,13 @@ export default function ChatPage() {
     try {
       const response = await API.post("/chat/ask", { question });
       setMessages((prev) => [...prev, { sender: "ai", text: response.data.answer, time }]);
-    } catch {
-      setMessages((prev) => [...prev, { sender: "ai", text: "Sorry, something went wrong. Please try again.", time }]);
+    } catch (err) {
+      console.error("Chat error:", err);
+      const detail = err.response?.data?.detail;
+      const errorText = detail
+        ? `Error: ${detail}`
+        : "Sorry, I couldn't reach the server. Please check your connection and try again.";
+      setMessages((prev) => [...prev, { sender: "ai", text: errorText, time }]);
     } finally {
       setLoading(false);
     }
