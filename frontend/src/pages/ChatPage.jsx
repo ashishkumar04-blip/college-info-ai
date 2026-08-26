@@ -185,12 +185,34 @@ export default function ChatPage() {
   const [totalClasses, setTotalClasses] = useState(40);
   const [attendedClasses, setAttendedClasses] = useState(32);
 
-  // Fee Calculator State
-  const [selectedCourse, setSelectedCourse] = useState("btech_cse");
-  const [scholarshipBracket, setScholarshipBracket] = useState("cat1");
+  // Attachment / Vision State
+  const [attachedImage, setAttachedImage] = useState(null); // base64 string
+  const [imageFileName, setImageFileName] = useState("");
+  const fileInputRef = useRef(null);
 
   const bottomRef = useRef(null);
   const speechRecognitionRef = useRef(null);
+
+  const handleFileSelect = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (file.size > 5 * 1024 * 1024) {
+      alert("Please select an image smaller than 5MB.");
+      return;
+    }
+    setImageFileName(file.name);
+    const reader = new FileReader();
+    reader.onload = () => {
+      setAttachedImage(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleRemoveImage = () => {
+    setAttachedImage(null);
+    setImageFileName("");
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
 
   // PWA Install Prompt Listener
   useEffect(() => {
@@ -304,13 +326,15 @@ export default function ChatPage() {
 
   const handleSend = async (customQuestion) => {
     const qToSend = (typeof customQuestion === "string" ? customQuestion : question).trim();
-    if (!qToSend || loading) return;
+    if ((!qToSend && !attachedImage) || loading) return;
 
     const time = now();
     playSound("send");
-    const userMessage = { sender: "user", text: qToSend, time };
+    const currentImg = attachedImage;
+    const userMessage = { sender: "user", text: qToSend || "Please analyze this image:", image: currentImg, time };
     setMessages((prev) => [...prev, userMessage]);
     setQuestion("");
+    handleRemoveImage();
     setLoading(true);
     setFollowUps([]);
 
@@ -318,7 +342,7 @@ export default function ChatPage() {
     setSpeakingIndex(null);
 
     try {
-      const response = await API.post("/chat/ask", { question: qToSend });
+      const response = await API.post("/chat/ask", { question: qToSend, image_data: currentImg });
       const fullAnswer = response.data.answer;
 
       // Instant display with zero artificial delay
@@ -768,7 +792,23 @@ export default function ChatPage() {
                 {msg.sender === "ai" ? (
                   <FormattedText text={msg.text} isDark={isDark} />
                 ) : (
-                  <span>{msg.text}</span>
+                  <div>
+                    {msg.image && (
+                      <img
+                        src={msg.image}
+                        alt="Uploaded document or photo"
+                        style={{
+                          maxWidth: "100%",
+                          maxHeight: "220px",
+                          borderRadius: "10px",
+                          marginBottom: "8px",
+                          display: "block",
+                          border: "1px solid rgba(255,255,255,0.3)",
+                        }}
+                      />
+                    )}
+                    <span>{msg.text}</span>
+                  </div>
                 )}
 
                 {/* Toolbar for AI Responses */}
@@ -841,7 +881,7 @@ export default function ChatPage() {
             <div style={styles.aiAvatar}>AI</div>
             <div style={{ ...styles.bubble, backgroundColor: currentTheme.bubbleAi, border: `1px solid ${currentTheme.border}`, padding: "14px 20px" }}>
               <div style={{ display: "flex", gap: "6px", alignItems: "center" }}>
-                <span style={{ fontSize: "12px", color: currentTheme.subText, marginRight: "4px" }}>Thinking</span>
+                <span style={{ fontSize: "12px", color: currentTheme.subText, marginRight: "4px" }}>Analyzing & Thinking</span>
                 {[0, 0.2, 0.4].map((delay, i) => (
                   <span key={i} style={{ ...styles.dot, animationDelay: `${delay}s` }} />
                 ))}
@@ -877,8 +917,72 @@ export default function ChatPage() {
         <div ref={bottomRef} />
       </div>
 
+      {/* Active Image Attachment Preview Bar */}
+      {attachedImage && (
+        <div
+          style={{
+            padding: "8px 20px",
+            backgroundColor: isDark ? "#251818" : "#fdf0f0",
+            borderTop: `1px solid ${isDark ? "#452525" : "#f4c6c6"}`,
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+          }}
+        >
+          <img
+            src={attachedImage}
+            alt="Preview"
+            style={{ width: "40px", height: "40px", objectFit: "cover", borderRadius: "6px", border: "1px solid #d98880" }}
+          />
+          <div style={{ flex: 1, fontSize: "12px", color: isDark ? "#fff" : "#8B0000", fontWeight: "600", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+            📎 Attached: {imageFileName || "Image"}
+          </div>
+          <button
+            style={{
+              background: "none",
+              border: "none",
+              color: "#e74c3c",
+              cursor: "pointer",
+              fontSize: "14px",
+              fontWeight: "bold",
+              padding: "4px 8px",
+            }}
+            onClick={handleRemoveImage}
+            title="Remove attachment"
+          >
+            ✕ Remove
+          </button>
+        </div>
+      )}
+
       {/* Input Bar */}
       <div style={{ ...styles.inputArea, backgroundColor: currentTheme.cardBg, borderTop: `1px solid ${currentTheme.border}` }}>
+        {/* Hidden File Input */}
+        <input
+          type="file"
+          accept="image/*"
+          ref={fileInputRef}
+          onChange={handleFileSelect}
+          style={{ display: "none" }}
+        />
+
+        {/* Attachment Button */}
+        <button
+          className="action-btn"
+          style={{
+            ...styles.micBtn,
+            backgroundColor: attachedImage ? "#8B0000" : isDark ? "#2a1c1c" : "#f7e8e8",
+            color: attachedImage ? "white" : "#8B0000",
+            borderColor: isDark ? "#4a2c2c" : "#edd5d5",
+          }}
+          onClick={() => fileInputRef.current?.click()}
+          title="Upload image, timetable, question paper, or circular"
+          disabled={loading}
+        >
+          📎
+        </button>
+
+        {/* Voice Input Button */}
         <button
           className={isListening ? "mic-listening" : "action-btn"}
           style={{
@@ -902,7 +1006,13 @@ export default function ChatPage() {
             borderColor: currentTheme.border,
           }}
           type="text"
-          placeholder={isListening ? "Listening... speak now" : "Ask anything in English or Hinglish (Admissions, Fees, Placements, Exams)..."}
+          placeholder={
+            attachedImage
+              ? "Ask a question about this attached image/document..."
+              : isListening
+              ? "Listening... speak now"
+              : "Ask anything in English or Hinglish (Admissions, Fees, Placements)..."
+          }
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -913,11 +1023,11 @@ export default function ChatPage() {
           className="btn-hover"
           style={{
             ...styles.sendBtn,
-            opacity: loading || !question.trim() ? 0.5 : 1,
-            cursor: loading || !question.trim() ? "not-allowed" : "pointer",
+            opacity: loading || (!question.trim() && !attachedImage) ? 0.5 : 1,
+            cursor: loading || (!question.trim() && !attachedImage) ? "not-allowed" : "pointer",
           }}
           onClick={() => handleSend()}
-          disabled={loading || !question.trim()}
+          disabled={loading || (!question.trim() && !attachedImage)}
           title="Send query"
         >
           ➤

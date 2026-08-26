@@ -19,8 +19,11 @@ SECRET_KEY = os.getenv("SECRET_KEY", "fallback-secret-key")
 ALGORITHM = "HS256"
 
 
+from typing import Optional
+
 class ChatRequest(BaseModel):
     question: str
+    image_data: Optional[str] = None
 
 
 def get_current_user(authorization: str = Header(...), db: Session = Depends(get_db)):
@@ -43,26 +46,28 @@ def ask_question(
     db: Session = Depends(get_db),
     current_user: models.User = Depends(get_current_user)
 ):
-    if not request.question.strip():
-        raise HTTPException(status_code=400, detail="Question cannot be empty")
+    if not request.question.strip() and not request.image_data:
+        raise HTTPException(status_code=400, detail="Question or image cannot be empty")
+
+    query_text = request.question.strip() if request.question.strip() else "Please analyze this uploaded image/document for LPU students."
 
     # Step 1: Find relevant info from your data
-    context = retrieve_context(request.question)
+    context = retrieve_context(query_text)
 
-    # Step 2: Get AI answer using that context
-    answer = get_ai_answer(request.question, context)
+    # Step 2: Get AI answer using that context + image
+    answer = get_ai_answer(query_text, context, request.image_data)
 
     # Step 3: Save to database
     chat_entry = models.ChatHistory(
         user_id=current_user.id,
-        question=request.question,
+        question=query_text,
         answer=answer
     )
     db.add(chat_entry)
     db.commit()
 
     return {
-        "question": request.question,
+        "question": query_text,
         "answer": answer
     }
 
