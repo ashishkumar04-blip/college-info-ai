@@ -573,12 +573,20 @@ export default function ChatPage() {
           <div style={styles.logoCircle}>LPU</div>
           <div>
             <div style={styles.headerTitle}>🎓 College Info AI</div>
-            <div style={styles.headerSubtitle}>Lovely Professional University • Student Super App</div>
+            <div style={styles.headerSubtitle}>Everything an LPU student needs, in one place.</div>
           </div>
         </div>
 
         <div style={styles.headerRight}>
           {/* Quick Tools Buttons */}
+          <button
+            className="btn-hover"
+            style={styles.toolBtn}
+            onClick={() => setActiveModal("help_hub")}
+            title="Where Do I Go? Problem Solver"
+          >
+            🧭 Where Do I Go?
+          </button>
           <button
             className="btn-hover"
             style={styles.toolBtn}
@@ -689,6 +697,14 @@ export default function ChatPage() {
 
             {/* Feature Cards Grid */}
             <div style={styles.featureCardsGrid}>
+              <div
+                style={{ ...styles.featureCard, backgroundColor: currentTheme.cardBg, borderColor: currentTheme.border }}
+                onClick={() => setActiveModal("help_hub")}
+              >
+                <div style={{ fontSize: "26px" }}>🧭</div>
+                <div style={{ fontWeight: "700", color: isDark ? "#fff" : "#8B0000", fontSize: "13px" }}>Where Do I Go?</div>
+                <div style={{ fontSize: "11px", color: currentTheme.subText }}>Problem Solver Hub</div>
+              </div>
               <div
                 style={{ ...styles.featureCard, backgroundColor: currentTheme.cardBg, borderColor: currentTheme.border }}
                 onClick={() => setActiveModal("cgpa")}
@@ -1198,6 +1214,98 @@ export default function ChatPage() {
           </div>
         </div>
       )}
+
+      {/* ================= MODAL: STUDENT HELP HUB & WHERE DO I GO ================= */}
+      {activeModal === "help_hub" && (
+        <div style={styles.modalOverlay} onClick={() => setActiveModal(null)}>
+          <div
+            className="modal-enter"
+            style={{ ...styles.modalContent, maxWidth: "540px", backgroundColor: currentTheme.cardBg, color: currentTheme.text, borderColor: currentTheme.border }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div style={styles.modalHeader}>
+              <h3 style={{ margin: 0, color: isDark ? "#ff7675" : "#8B0000" }}>🧭 Student Help Hub & "Where Do I Go?"</h3>
+              <button style={styles.closeBtn} onClick={() => setActiveModal(null)}>✕</button>
+            </div>
+
+            <div style={{ ...styles.modalBody, maxHeight: "420px", overflowY: "auto" }}>
+              {/* Quick Facts Banner */}
+              <div style={{ ...styles.resultBanner, marginBottom: "14px", padding: "8px 12px" }}>
+                <div style={{ textAlign: "center" }}>
+                  <div style={{ fontSize: "10px", color: currentTheme.subText }}>PROGRAMS</div>
+                  <div style={{ fontSize: "16px", fontWeight: "800", color: "#8B0000" }}>200+</div>
+                </div>
+                <div style={{ textAlign: "center" }}>
+                  <div style={{ fontSize: "10px", color: currentTheme.subText }}>GLOBAL STUDENTS</div>
+                  <div style={{ fontSize: "16px", fontWeight: "800", color: "#8B0000" }}>3,000+</div>
+                </div>
+                <div style={{ textAlign: "center" }}>
+                  <div style={{ fontSize: "10px", color: currentTheme.subText }}>STARTUPS</div>
+                  <div style={{ fontSize: "16px", fontWeight: "800", color: "#27ae60" }}>250+</div>
+                </div>
+                <div style={{ textAlign: "center" }}>
+                  <div style={{ fontSize: "10px", color: currentTheme.subText }}>INCUBATORS</div>
+                  <div style={{ fontSize: "16px", fontWeight: "800", color: "#27ae60" }}>3</div>
+                </div>
+              </div>
+
+              {/* Student Issue Solver List */}
+              <div style={{ fontWeight: "700", fontSize: "13px", color: isDark ? "#ff8888" : "#8B0000", marginBottom: "8px" }}>
+                🎯 "Where Do I Go?" Problem Solver:
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "16px" }}>
+                {[
+                  { issue: "🪪 Lost ID Card", where: "Division of Student Affairs (DSW), Block 30 / Apply on UMS", action: "Pay nominal fee, collect RFID card" },
+                  { issue: "🏠 Hostel / Roommate Issue", where: "Block Warden Office / Chief Warden (hostel@lpu.in)", action: "Submit written request or email" },
+                  { issue: "💰 Fee Payment / Fine Issue", where: "Finance & Accounts Office, Block 29 / UMS E-Samadhan", action: "Verify receipts or log ticket" },
+                  { issue: "📝 Exam / Backlog / Grade Issue", where: "Examination Cell, Block 29 (examinations@lpu.in)", action: "Admit cards, reappear & revaluation" },
+                  { issue: "🎓 Scholarship Queries", where: "Scholarship Cell, Division of Student Welfare (DSW)", action: "LPUNEST, sports & merit verification" },
+                  { issue: "🏥 Medical Emergency", where: "University Hospital (UniHospital 24x7)", action: "Call +91-1824-517200 (Ext: 7200)" },
+                ].map((hub, idx) => (
+                  <div
+                    key={idx}
+                    style={{
+                      padding: "10px 12px",
+                      borderRadius: "10px",
+                      backgroundColor: isDark ? "#282834" : "#fdf4f4",
+                      border: `1px solid ${isDark ? "#3f3f50" : "#eddada"}`,
+                    }}
+                  >
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "3px" }}>
+                      <span style={{ fontWeight: "700", fontSize: "12px", color: isDark ? "#ff9999" : "#8B0000" }}>{hub.issue}</span>
+                      <span style={{ fontSize: "10px", color: "#27ae60", fontWeight: "600" }}>{hub.action}</span>
+                    </div>
+                    <div style={{ fontSize: "11px", color: currentTheme.text }}>
+                      <strong>Destination:</strong> {hub.where}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* 4-Year Survival Guide */}
+              <div style={{ fontWeight: "700", fontSize: "13px", color: isDark ? "#ff8888" : "#8B0000", marginBottom: "8px" }}>
+                📚 4-Year Student Survival Roadmap:
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                {[
+                  { yr: "1st Week", focus: "ID card collection, UMS setup, timetable & orientation" },
+                  { yr: "1st Semester", focus: "75%+ attendance, CA assignments, join clubs & organizations" },
+                  { yr: "2nd Year", focus: "Certifications (AWS/Google/Coursera) & Minor specializations" },
+                  { yr: "3rd Year", focus: "Internships, hackathons, research projects & startup grants" },
+                  { yr: "Final Year", focus: "Corporate placement drives, capstone project & graduation" },
+                ].map((step, idx) => (
+                  <div key={idx} style={{ display: "flex", gap: "8px", fontSize: "11px", alignItems: "flex-start" }}>
+                    <span style={{ color: isDark ? "#ff8888" : "#8B0000", fontWeight: "700", minWidth: "85px" }}>• {step.yr}:</span>
+                    <span style={{ color: currentTheme.subText }}>{step.focus}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -1322,7 +1430,7 @@ const styles = {
   emptyText: { marginBottom: "20px", fontSize: "13px", lineHeight: "1.6" },
   featureCardsGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
     gap: "8px",
     marginTop: "10px",
   },

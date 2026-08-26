@@ -48,7 +48,7 @@ export default function SignupPage() {
         <div style={styles.logoWrap}>
           <div style={styles.logo}>LPU</div>
           <h1 style={styles.appName}>🎓 College Info AI</h1>
-          <p style={styles.tagline}>Your Smart Guide to Lovely Professional University</p>
+          <p style={styles.tagline}>Everything an LPU student needs, in one place.</p>
         </div>
 
         <h2 style={styles.heading}>Create Account</h2>

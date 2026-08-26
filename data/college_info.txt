@@ -28,10 +28,13 @@ TABLE OF CONTENTS & KNOWLEDGE CATEGORIES
 
 ---
 
-## 🏫 UNIVERSITY OVERVIEW
-- About LPU: Lovely Professional University (LPU) is a premier private university established in 2005 under the Lovely Professional University Act by the State Legislature of Punjab. It is recognized under Section 2(f) of the UGC Act, 1956.
+## 🏫 UNIVERSITY OVERVIEW & HISTORY
+- About LPU: Lovely Professional University (LPU) is a premier private university established in 2005 under the Lovely Professional University Act by the State Legislature of Punjab. The origin of the institution began in 2001 with the first educational institution, leading to formal UGC Recognition in 2006 under Section 2(f) of the UGC Act, 1956.
+- Official Tagline: "Everything an LPU student needs, in one place."
 - Campus Size: Sprawling 600+ acre green, Wi-Fi enabled, hi-tech campus situated on the National Highway 1 (GT Road) in Phagwara, Punjab (between Jalandhar and Ludhiana).
 - Student Demographics: Over 35,000+ to 40,000+ full-time students from all 28 states of India and 8 union territories, plus 3,000+ international students from over 50+ nations across the globe.
+- Incubated Startups: 250+ student and faculty startups supported across 3 on-campus startup incubators.
+- Industry Collaborations: 200+ global corporate and academic tie-ups.
 - Vision: To be a premier academic institution recognized globally for its contribution to industry and society through excellence in teaching, learning, research, internationalization, entrepreneurship, and leadership.
 - Mission: 
   * Transform education through academic rigor, practical learning, and industry integration.
@@ -413,3 +416,39 @@ A9: If you receive an 'F' or 'E' grade, you must apply for a Reappear Examinatio
 
 Q10: Where is the UniHospital located and what services does it offer?
 A10: UniHospital is located on campus and offers 24x7 emergency medical care, resident doctors, OPD, diagnostic lab, ICU, ambulances, and an attached pharmacy. Basic consultation is free for enrolled students.
+
+---
+
+## 🎯 STUDENT HELP HUB & "WHERE DO I GO?" DIRECTORY
+Quick reference guide for resolving common student problems:
+- Lost ID Card / Re-issue → Visit Division of Student Affairs (DSW), Block 30 / Apply on UMS.
+- Hostel Room / Roommate / Maintenance Issue → Visit Hostel Office in your respective block or email chiefwarden@lpu.in / hostel@lpu.in.
+- Fee Payment / Refund / Fine Issue → Visit Finance & Accounts Office, Block 29 / Raise ticket on UMS E-Samadhan.
+- Exam / Backlog / Grade / Revaluation Issue → Contact Examination Cell, Block 29 / email examinations@lpu.in.
+- Scholarship Application & Queries → Visit Scholarship Cell in Division of Student Welfare (DSW).
+- Medical Emergency / Sickness → Go directly to UniHospital (Open 24x7) or call Emergency Helpline: +91-1824-517200 (Ext: 7200).
+- Library Book Renewal / Fine → Dr. S. Radhakrishnan Central Library, Block 15 Helpdesk.
+- Bus Pass & Transport Services → Transport Office, Main Gate Entry.
+- Placement / Internship Training → Division of Career Services (DCS) / Center for Professional Enhancement (CPE).
+
+---
+
+## 📚 4-YEAR STUDENT SURVIVAL ROADMAP
+Essential milestones for every LPU student from Day 1 to Convocation:
+- 1st Week (Induction): Collect RFID Student ID card, setup UMS portal login, attend department orientation, join official WhatsApp/Telegram class groups, and explore campus landmarks (UniMall, Block 34, Central Library).
+- 1st Semester (Foundation): Maintain 75%+ attendance in every subject, complete Continuous Assessment (CA) quizzes on UMS, prepare for Mid-Term Tests (MTT), and join 1-2 student clubs / organizations (technical, cultural, or sports).
+- 2nd Year (Skills & Certifications): Focus on industry certifications (Coursera, edX, AWS, Google Cloud, Cisco), declare a Minor specialization if applicable, and maintain a CGPA of 7.5+ for Super Dream placement eligibility.
+- 3rd Year (Internships & Research): Participate in national hackathons, publish research papers with faculty mentors, apply for 250+ incubated startup grants, and undertake mandatory summer industrial internships.
+- Final Year (Placements & Graduation): Register on DCS placement portal, attend on-campus corporate recruitment drives, complete the capstone industry project, clear all fee dues, and prepare for Degree Convocation!
+
+---
+
+## 🚀 STARTUPS, INCUBATION & INNOVATION OPPORTUNITIES
+LPU is one of India's leading startup hubs:
+- 250+ Incubated Startups: Supported by university mentorship, lab infrastructure, seed funding, and patent assistance.
+- 3 Dedicated On-Campus Incubators: Supporting AI, deep-tech, bio-sciences, and consumer tech ventures.
+- 200+ Global Corporate Collaborations: Tie-ups with Google, Microsoft, Intel, Cisco, Bosch, and AWS.
+- Research with Faculty: Over 27,850+ publications and 10,000+ patent filings with student co-authors.
+- International Exchange: Semester abroad and credit transfer programs with 550+ partner universities across 80+ countries.
+- Innovation Competitions: Annual university hackathons, robotic challenges, and startup pitch fests with cash grants.
+
