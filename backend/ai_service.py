@@ -7,11 +7,11 @@ load_dotenv()
 # Configure Gemini with your API key
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-# Ultra-fast generation parameters
+# Ultra-fast generation parameters: low temperature & tight max tokens for sub-second generation
 generation_config = {
-    "temperature": 0.2,
-    "top_p": 0.85,
-    "max_output_tokens": 850,
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "max_output_tokens": 500,
 }
 
 # Verified active high-volume models in exact priority order
@@ -24,29 +24,30 @@ FALLBACK_MODELS = [
     "gemini-flash-latest",
 ]
 
+# Fast in-memory query cache for instant 0.01s repeated/popular answers
+_ANSWER_CACHE = {}
+
 
 def get_ai_answer(question: str, context: str) -> str:
     """
-    Send user question to Gemini with multi-model fallback.
-    If all external API models are rate-limited, safely returns the verified LPU context.
+    Send user question to Gemini with in-memory caching and multi-model fallback.
     """
-    prompt = f"""You are a smart, friendly, and ultra-fast AI student companion for Lovely Professional University (LPU).
-You understand student queries in English, Hindi, and Hinglish (e.g., "hostel me cooler allowed hai?", "75% attendance rule kya hai?").
+    cache_key = " ".join(question.lower().strip().split())
+    if cache_key in _ANSWER_CACHE:
+        return _ANSWER_CACHE[cache_key]
 
-Guidelines:
-1. Answer directly and concisely based on the verified LPU information provided below.
-2. Structure answers with clean bullet points, bold key points, and clear numbers.
-3. If the user asks in casual Hinglish/Hindi, reply in simple, friendly English or natural Hinglish as appropriate.
-4. Do not include boring corporate preambles. Get straight to the answer.
-5. If the exact answer is not present in the provided info, say: "I don't have verified details on this specific query. Please check with LPU Admissions at 1800-102-4431 or Division of Student Welfare (DSW)."
+    prompt = f"""You are a smart, ultra-fast AI assistant for Lovely Professional University (LPU).
+Answer directly and concisely in short bullet points based on the verified LPU info below.
+If user asks in Hinglish, reply in friendly simple English or natural Hinglish.
+Avoid introductory greetings. Give the exact facts immediately.
 
-COLLEGE INFORMATION:
+COLLEGE INFO:
 {context}
 
-STUDENT'S QUESTION:
+QUESTION:
 {question}
 
-DIRECT ANSWER:"""
+ANSWER:"""
 
     # 1. Try verified high-volume Gemini models in sequence
     for model_name in FALLBACK_MODELS:
@@ -54,13 +55,16 @@ DIRECT ANSWER:"""
             model = genai.GenerativeModel(model_name, generation_config=generation_config)
             response = model.generate_content(prompt)
             if response and response.text:
-                return response.text.strip()
+                answer = response.text.strip()
+                _ANSWER_CACHE[cache_key] = answer
+                return answer
         except Exception:
-            # Silently fallback to next model in list
             continue
 
-    # 2. Resilient Smart Fallback: If all API endpoints hit quota limits, return direct verified context
+    # 2. Resilient Smart Fallback: Return verified direct context
     if context and len(context.strip()) > 20:
-        return f"Here is the verified information from the LPU database regarding your query:\n\n{context[:900]}"
+        fallback_answer = f"Here is the verified information from the LPU database:\n\n{context[:800]}"
+        _ANSWER_CACHE[cache_key] = fallback_answer
+        return fallback_answer
 
     return "I don't have verified details on this specific query. Please contact LPU Admissions at 1800-102-4431 or admissions@lpu.in."
